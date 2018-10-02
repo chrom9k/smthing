@@ -1,3 +1,3 @@
 <?php
-  echo "UP"
+  include 'index.phtml'
 ?>
