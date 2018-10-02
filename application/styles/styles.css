@@ -10,6 +10,9 @@
 
 .nav-main li {
   list-style-type: none;
+}
+
+.nav-main li a {
   font-size: 100%;
   text-decoretion: none;
   color: white;
