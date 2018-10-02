@@ -1,1 +1,2 @@
-<h3>This is CONTENT</h3>
+<?php
+  inclide 'content.html';
