@@ -1,1 +1,2 @@
-echo "UP"
+<?php
+  echo "UP"
