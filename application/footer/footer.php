@@ -1,3 +1,2 @@
 <?php
-  include 'footer.phtml';
-?>
+  include 'footer.html';
