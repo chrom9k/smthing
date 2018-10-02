@@ -1,3 +1,3 @@
 <?php
-  include 'index.phtml'
+  include 'index.html'
 ?>
