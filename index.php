@@ -1,2 +1,3 @@
 <?php
-  include 'index.phtml'
+  p = 'Hello from the other side';
+  include 'index.phtml';
