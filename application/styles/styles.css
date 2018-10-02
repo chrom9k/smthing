@@ -1,4 +1,4 @@
-.nav-main {
+#nav-main {
   display: flex;
   width: 100%;
   height: 50px;
@@ -8,11 +8,11 @@
   background-color: black;
 }
 
-.nav-main li {
+#nav-main li {
   list-style-type: none;
 }
 
-.nav-main li a {
+#nav-main li a {
   font-size: 100%;
   text-decoration: none;
   color: white;
