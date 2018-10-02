@@ -1,3 +1,3 @@
 <?php
-  p = 'Hello from the other side';
+  $p = 'Hello from the other side';
   include 'index.phtml';
