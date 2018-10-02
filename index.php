@@ -3,7 +3,7 @@
   echo HEADER;
   include HEADER;
 
-  $p = 'Hello from the other side';
+  $p = 'Another side';
   include 'index.phtml';
   
   include FOOTER;
