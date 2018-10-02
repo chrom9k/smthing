@@ -1,6 +1,6 @@
 <?php
   require_once 'config.php';
-  echo HEADER;
+  echo dirname(__FILE__);
   include HEADER;
 
   $p = 'Another side';
