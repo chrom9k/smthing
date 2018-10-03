@@ -22,7 +22,9 @@
 <script>
     window.onload = function() {
         var left = document.getElementById("left").getElementsByTagName("li");
-        console.log(left);
+        left.forEach(function(elem){
+            console.log(elem);
+        });
     };
 
 </script>
