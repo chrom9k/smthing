@@ -41,6 +41,10 @@ footer h1 {
     padding: 0;
 }
 
+#left li {
+    font-size: larger;
+}
+
 #left li:before {
     content: counter(item) " ";
     counter-increment: item;
@@ -89,6 +93,13 @@ div {
     display: flex;
 }
 
-.avtive {
+.middle div {
+    display: none;
+}
+
+.middle div:first-child {
     display: flex;
 }
+
+
+
