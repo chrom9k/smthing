@@ -34,13 +34,13 @@ footer h1 {
     list-style-type: none;
 }
 
-#left li {
-    text-decoration: none;
-}
-
 #left li:before {
     content: counter(item) "";
     counter-increment: item;
+}
+
+#left li a {
+    text-decoration: none;
 }
 
 #middle {
