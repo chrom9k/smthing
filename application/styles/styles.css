@@ -21,12 +21,13 @@ footer h1 {
 }
 
 #content div {
-    border: 1px solid transparent;
+    border: 1px solid #000000fc;
+    border-radius: 4px;
+    margin: 10px;
 }
 
 #left {
     flex-flow: column wrap;
-    border: 1px solid transparent;
 }
 
 #left ol {
@@ -35,7 +36,7 @@ footer h1 {
 }
 
 #left li:before {
-    content: counter(item) "";
+    content: counter(item) " ";
     counter-increment: item;
 }
 
