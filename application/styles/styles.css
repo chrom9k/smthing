@@ -7,13 +7,14 @@ footer {
   background-color: black;
 }
 
-footer h2 {
+footer h1 {
   color: white;
 }
 
 .container {
   display: flex;
   justify-content: flex-end;
+  flex-flow: column wrap;
 }
 
 #content {
