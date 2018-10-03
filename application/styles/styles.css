@@ -59,6 +59,12 @@ footer h1 {
     color: #000000;
 }
 
+#left li a:hover {
+    text-decoration: none;
+    text-decoration-line: underline;
+    color: #000000;
+}
+
 #middle {
     flex:2;
     border: 1px solid transparent;
