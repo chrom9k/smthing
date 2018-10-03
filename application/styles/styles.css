@@ -27,6 +27,7 @@ footer h1 {
 #left ol {
   counter-reset: item;
   list-style-type: none;
+  text-decoration: none;
 }
 
 #left li:before { 
