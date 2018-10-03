@@ -1,6 +1,6 @@
 <div id="content" class="container">
   <div id="left">
-    <ol>
+    <ol class="container">
       <li class="active"><a href="#">Задание</a></li>
       <li><a href="#">Задание</a></li>
       <li><a href="#">Задание</a></li>
@@ -9,12 +9,20 @@
     </ol>
     </div>
   <div id="middle">
-    <div>Решение 1</div>
-    <div>Решение 2</div>
-    <div>Решение 3</div>
-    <div>Решение 4</div>
-    <div>Решение 5</div>
+    <div id="sol1">Решение 1</div>
+    <div id="sol2">Решение 2</div>
+    <div id="sol3">Решение 3</div>
+    <div id="sol4">Решение 4</div>
+    <div id="sol5">Решение 5</div>
   </div>
   <div id="right">
   </div>
 </div>
+
+<script>
+    window.onload = function() {
+        var left = document.getElementById("left").getElementsByTagName("li");
+        console.log(left);
+    };
+
+</script>
