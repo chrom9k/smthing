@@ -1,2 +1,2 @@
 <?php
-  inclide 'content.html';
+  include 'content.html';
