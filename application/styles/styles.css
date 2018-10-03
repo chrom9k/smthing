@@ -2,72 +2,82 @@ body {
 }
 
 footer {
-  width: 100%;
-  height: 100px;
-  background-color: black;
+    width: 100%;
+    height: 100px;
+    background-color: black;
 }
 
 footer h1 {
-  color: white;
+    color: white;
 }
 
 .container {
-  display: flex;
-  justify-content: space-between;
-  flex-flow: column wrap;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap;
 }
 
 #content {
 }
 
+#content div {
+    border: 1px solid transparent;
+}
+
 #left {
-  flex-flow: column wrap;
+    flex-flow: column wrap;
+    border: 1px solid transparent;
 }
 
 #left ol {
-  counter-reset: item;
-  list-style-type: none;
-  text-decoration: none;
+    counter-reset: item;
+    list-style-type: none;
+    text-decoration: none;
 }
 
 #left li:before { 
-    content: counter(item) "  "; 
+    content: counter(item) "";
     counter-increment: item;
 }
 
 #middle {
-  flex:2;
+    flex:2;
+    border: 1px solid transparent;
+}
+
+#right {
+
 }
 
 #nav-main {
-  display: flex;
-  width: 100%;
-  height: 50px;
-  justify-content: space-around;
-  align-items: center;
-  background-color: black;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
 }
 
 #nav-main-menu {
-  width: 100%;
-  justify-content: space-around;
-  align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #nav-main-menu li {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 #nav-main-menu li a {
-  font-size: 100%;
-  text-decoration: none;
-  color: white;
+    font-size: 100%;
+    text-decoration: none;
+    color: white;
 }
 
 div {
-  display: flex;
+    display: flex;
 }
 
 .avtive {
-  display: flex; 
+    display: flex;
 }
