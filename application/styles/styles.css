@@ -6,6 +6,10 @@ body {
   top: 80px;
 }
 
+#left {
+  flex-flow: column wrap;
+}
+
 #left li {
   list-style-type:none;
 }
