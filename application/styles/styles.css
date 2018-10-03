@@ -20,7 +20,7 @@ footer h1 {
 #content {
 }
 
-#content div {
+#content > div {
     border: 1px solid #ddd;
     border-radius: 4px;
     margin: 10px;
@@ -94,11 +94,11 @@ div {
 }
 
 .middle div {
-    display: none;
+    display: none !important;
 }
 
 .middle div:first-child {
-    display: flex;
+    display: flex !important;
 }
 
 
