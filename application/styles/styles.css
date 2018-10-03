@@ -21,9 +21,10 @@ footer h1 {
 }
 
 #content div {
-    border: 1px solid #000000fc;
+    border: 1px solid #ddd;
     border-radius: 4px;
     margin: 10px;
+    width: 300px;
 }
 
 #left {
@@ -33,6 +34,11 @@ footer h1 {
 #left ol {
     counter-reset: item;
     list-style-type: none;
+    margin: 15px;
+    justify-content: space-between;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 0;
 }
 
 #left li:before {
@@ -42,6 +48,7 @@ footer h1 {
 
 #left li a {
     text-decoration: none;
+    color: #000000;
 }
 
 #middle {
