@@ -10,8 +10,9 @@ body {
   flex-flow: column wrap;
 }
 
-#left li {
-  list-style-type:none;
+#left ol {
+  counter-reset: item;
+  list-style-type: none;
 }
 
 #left li:before { 
