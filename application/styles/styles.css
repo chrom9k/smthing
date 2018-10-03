@@ -89,10 +89,6 @@ footer h1 {
     color: white;
 }
 
-div {
-    display: flex;
-}
-
 .middle div {
     display: none;
 }
