@@ -1,3 +1,7 @@
+* {
+    font-size: larger;
+}
+
 body {
 }
 
@@ -20,12 +24,14 @@ footer h1 {
 
 #content {
     width: 100%;
+    align-items: initial;
 }
 
 #content > div {
     border: 1px solid #ddd;
     border-radius: 4px;
     margin: 10px;
+    padding: 15px;
     width: 300px;
 }
 
@@ -34,16 +40,13 @@ footer h1 {
 }
 
 #left ol {
+    margin: 0;
+    padding: 0;
     counter-reset: item;
     list-style-type: none;
-    margin: 15px;
-    justify-content: space-between;
-    display: flex;
-    padding: 0;
-}
+    flex-flow: column;
+    align-items: flex-start;
 
-#left li {
-    font-size: larger;
 }
 
 #left li:before {
