@@ -13,13 +13,11 @@ footer h1 {
 
 .container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   flex-flow: column wrap;
 }
 
 #content {
-  top: 80px;
-  position: absolute;
 }
 
 #left {
