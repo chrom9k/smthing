@@ -32,10 +32,13 @@ footer h1 {
 #left ol {
     counter-reset: item;
     list-style-type: none;
+}
+
+#left li {
     text-decoration: none;
 }
 
-#left li:before { 
+#left li:before {
     content: counter(item) "";
     counter-increment: item;
 }
