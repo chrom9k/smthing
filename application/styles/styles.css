@@ -1,3 +1,7 @@
+body {
+  position: relative;
+}
+
 #content {
   top: 80px;
 }
