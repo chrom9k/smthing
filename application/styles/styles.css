@@ -94,11 +94,11 @@ div {
 }
 
 .middle div {
-    display: none !important;
+    display: none;
 }
 
 .middle div:first-child {
-    display: flex !important;
+    display: flex;
 }
 
 
