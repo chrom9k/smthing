@@ -5,9 +5,12 @@
   position: fixed;
   justify-content: space-around;
   align-items: center;
+}
+#nav-main-menu {
+  justify-content: space-around;
+  align-items: center;
   background-color: black;
 }
-
 #nav-main-menu li {
   list-style-type: none;
 }
