@@ -2,6 +2,11 @@ body {
   position: relative;
 }
 
+.container {
+  display: flex;
+  justify-content: flex-end;
+}
+
 #content {
   top: 80px;
 }
@@ -33,11 +38,13 @@ body {
   align-items: center;
   background-color: black;
 }
+
 #nav-main-menu {
   width: 100%;
   justify-content: space-around;
   align-items: center;
 }
+
 #nav-main-menu li {
   list-style-type: none;
 }
