@@ -89,13 +89,12 @@ footer h1 {
     color: white;
 }
 
-.middle div {
+#middle div {
     display: none;
 }
 
-.middle div:first-child {
+#middle div:first-child {
     display: flex;
 }
-
 
 
