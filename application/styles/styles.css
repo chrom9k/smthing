@@ -1,3 +1,11 @@
+#content {
+  top: 80px;
+}
+
+#middle {
+  flex:2;
+}
+
 #nav-main {
   display: flex;
   width: 100%;
