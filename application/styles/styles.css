@@ -113,5 +113,9 @@ li.active {
     text-decoration-line: underline !important;
 }
 
+#exercice > div {
+    border: 1px solid transparent;
+}
+
 
 

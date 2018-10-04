@@ -41,12 +41,17 @@
       'должна быть заменена на текст«x(k)», где x- символ, а k- строка, являющаяся ' +
       'записью числа вхождений символа в исходную строку',
   ];
-  document.getElementById("left").addEventListener("click", function changeCont(elem){
+  var lis = document.getElementById("left").getElementsByTagName("li");
+  lis.forEach(function(item, i, lis) {
+      item.addEventListener("click", function (elem) {
+        console.log(elem);
+      });
+  });
+  document.getElementById("left").addEventListener("click", function (elem){
       var el = elem.target;
       if (el.tagName == "LI"){
           document.getElementById("exercice").innerHTML = '<div>' + ex[el.value] + '</div>';
           var tablinks = document.getElementById("left").getElementsByTagName("li");
-          console.log(tablinks);
           for (var i = 0; i < tablinks.length; i++){
               tablinks[i].classList.remove("active");
           }
