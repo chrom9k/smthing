@@ -119,6 +119,7 @@ li.active {
     border: 1px solid #dddddd;
     border-radius: 4px;
     padding: 10px;
+    margin: 5px;
 }
 
 div {
