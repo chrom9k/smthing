@@ -44,12 +44,16 @@
   document.getElementById("left").addEventListener("click", function changeCont(elem){
       console.log(elem);
       var el = elem.target;
-      document.getElementById("exercice").innerText = '<div>' + ex[el.value] + '</div>';
-      tablinks = document.getElementById("left").getElementsByTagName("li");
-      console.log(tablinks);
-      for (var i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.remove("active");
+      if (el.localName == "li"){
+          console.log(el.localName);
+          document.getElementById("exercice").innerHTML = '<div>' + ex[el.value] + '</div>';
+          var tablinks = document.getElementById("left").getElementsByTagName("li");
+          console.log(tablinks);
+          for (var i = 0; i < tablinks.length; i++){
+              tablinks[i].className.remove("active");
+          }
+          el.className.add("active");
       }
-      el.className.add("active");
+
   });
 </script>
