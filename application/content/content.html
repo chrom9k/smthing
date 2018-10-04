@@ -24,11 +24,8 @@
       '',
   ];
   var lis = document.getElementById("left").getElementsByTagName("li");
-  for (var i = 0; i < lis.length; i++) {
-      lis[i].onclick = function () {
-          document.getElementById("exercice").innerHTML = ex[i];
-          console.log(i);
-          console.log(ex[i]);
-      };
-   }
+      lis.onclick = function () {
+          document.getElementById("exercice").innerHTML = ex;
+          console.log(ex);
+      }
 </script>
