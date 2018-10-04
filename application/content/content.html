@@ -16,16 +16,16 @@
 </div>
 
 <script type="text/javascript">
-  const ex = [
+  var ex = [
       'Составить программу, которая по порядковому номеру месяца определяет время года, к которому относится этот месяц.',
-      'Имеется n бактерий красного цвета. Через1 такт времени красная бактерия меняется на зелёную, затем через1 такт времени делится на красную и зелёную. Сколько будет всех бактерий через k тактов времени?',
+      'Имеется n бактерий красного цвета. Через 1 такт времени красная бактерия меняется на зелёную, затем через 1 такт времени делится на красную и зелёную. Сколько будет всех бактерий через k тактов времени?',
       '',
       '',
       '',
   ];
-  var lis = document.getElementById("left").getElementsByTagName("li");
-      lis.onclick = function () {
-          document.getElementById("exercice").innerHTML = ex;
-          console.log(ex);
-      }
+  document.getElementById("left").addEventListener("click", chageCont());
+
+  function changeCont() {
+      console.log(this);
+  }
 </script>
