@@ -1,11 +1,11 @@
 <div id="content" class="container">
   <div id="left">
     <ol class="container">
-      <li class="active">Задание</li>
-      <li>Задание</li>
-      <li>Задание</li>
-      <li>Задание</li>
-      <li>Задание</li>
+      <li class="active" value="1">Задание</li>
+      <li value="2">Задание</li>
+      <li value="3">Задание</li>
+      <li value="4">Задание</li>
+      <li value="5">Задание</li>
     </ol>
   </div>
   <div id="middle">
@@ -25,7 +25,6 @@
   ];
   document.getElementById("left").addEventListener("click", function changeCont(elem){
       console.log(elem.target);
-      console.log(getComputedStyle(elem.target, ':before'));
-      document.getElementById("exercice").innerText = ex[getComputedStyle(elem.target, ':before')];
+      document.getElementById("exercice").innerText = ex[elem.target.valueOf()];
   });
 </script>
