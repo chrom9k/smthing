@@ -42,14 +42,24 @@
       'записью числа вхождений символа в исходную строку</div>',
   ];
 
-  window.onload = document.getElementById("exercice").innerHTML =  ex[0];
+  window.onload = function (){
+      document.getElementById("exercice").innerHTML =  ex[0];
+      listererForLi();
+  };
+  function listererForLi() {
+      var lis = document.getElementById("left").getElementsByTagName("li");
+      for (var num = 0; num < lis.length; num++) {
+          lis[num].addEventListener("click", function (elem) {
+              var el = elem.target;
+              document.getElementById("exercice").innerHTML = ex[el.value];
+              for (var i = 0; i < lis.length; i++){
+                lis[i].classList.remove("active");
+              }
+              el.classList.add("active");
+          });
+      }
+  }
 
-  var lis = document.getElementById("left").getElementsByTagName("li");
-  lis.forEach(function(item, i, lis) {
-      item.addEventListener("click", function (elem) {
-        console.log(elem);
-      });
-  });
   // document.getElementById("left").addEventListener("click", function (elem){
   //     var el = elem.target;
   //     if (el.tagName == "LI"){
