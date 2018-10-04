@@ -2,7 +2,8 @@
     font-size: large;
 }
 
-body {
+body > div{
+    flex-flow: column;
 }
 
 footer {
@@ -18,7 +19,7 @@ footer h1 {
 .container {
     display: flex;
     justify-content: space-around;
-    flex-flow: row wrap;
+    flex-flow: row;
     align-items: center;
 }
 
