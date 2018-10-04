@@ -11,10 +11,10 @@
   <div id="middle">
     <div id="exercice"></div>
     <div id="solution">
-      <form>
+      <form action="sols/first.php">
         <label>Выберите номер месяца</label>
-        <input type="number" min="1" max="12" value="<? echo $currMonth?>"/>
-        <p>Месяц: <? echo $month[$currMonth] ?></p>
+        <input type="number" min="1" max="12" name="month" <? echo $currMonth?>"/>
+<!--        <p>Месяц: --><?// echo $month[$currMonth] ?><!--</p>-->
           <button type="submit" formtarget="_blank">Send</button>
       </form>
 
