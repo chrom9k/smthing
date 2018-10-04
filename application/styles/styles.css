@@ -102,22 +102,27 @@ body > div{
     text-decoration: underline;
 }
 
-#middle > div {
-    display: none;
+#middle {
+    display: flex;
+    flex-flow: column;
 }
 
-#middle > div:first-child {
-    display: flex;
-}
+/*#middle > div:first-child {*/
+    /*display: flex;*/
+/*}*/
 
 li.active {
     text-decoration-line: underline !important;
 }
 
-#exercice > div {
+#middle > div {
     border: 1px solid #dddddd;
     border-radius: 4px;
     padding: 10px;
+}
+
+div {
+    display: flex;
 }
 
 
