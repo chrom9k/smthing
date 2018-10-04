@@ -50,16 +50,16 @@
         console.log(elem);
       });
   });
-  document.getElementById("left").addEventListener("click", function (elem){
-      var el = elem.target;
-      if (el.tagName == "LI"){
-          document.getElementById("exercice").innerHTML = ex[el.value];
-          var tablinks = document.getElementById("left").getElementsByTagName("li");
-          for (var i = 0; i < tablinks.length; i++){
-              tablinks[i].classList.remove("active");
-          }
-          el.classList.add("active");
-      }
-
-  });
+  // document.getElementById("left").addEventListener("click", function (elem){
+  //     var el = elem.target;
+  //     if (el.tagName == "LI"){
+  //         document.getElementById("exercice").innerHTML = ex[el.value];
+  //         var tablinks = document.getElementById("left").getElementsByTagName("li");
+  //         for (var i = 0; i < tablinks.length; i++){
+  //             tablinks[i].classList.remove("active");
+  //         }
+  //         el.classList.add("active");
+  //     }
+  //
+  // });
 </script>
