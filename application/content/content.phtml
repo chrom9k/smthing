@@ -52,7 +52,7 @@
 
   window.onload = function (){
       document.getElementById("exercice").innerHTML =  ex[0];
-      document.getElementById("solution").getElementsByTagName("input")[0].value = 1;
+      getMonth();
       listenerForLi();
   };
   function listenerForLi() {
@@ -71,6 +71,6 @@
   function getMonth() {
       var month = json_encode(<? echo $month ?>);
 
-      document.getElementById("month").innerText = 'Месяц:' + month[document.getElementById("solution").getElementsByTagName("input")[0].value];
+      document.getElementById("month").innerText = 'Время года:' + month[document.getElementById("solution").getElementsByTagName("input")[0].value];
   }
 </script>
