@@ -13,9 +13,8 @@
     <div id="solution">
         <form action="/application/sols/first.php" target="_blank">
             <label>Выберите номер месяца</label>
-            <input onchange="getMonth()" type="number" min="1" max="12" name="month" value="<? echo $currMonth?>"/>
-            <p id="month"></p>
-          <button type="submit">Send</button>
+            <input onchange="getMonth()" type="number" min="1" max="12" name="month" value="1"/>
+          <button style="float:right" type="submit">Send</button>
         </form>
     </div>
   </div>
@@ -52,7 +51,6 @@
 
   window.onload = function (){
       document.getElementById("exercice").innerHTML =  ex[0];
-      getMonth();
       listenerForLi();
   };
   function listenerForLi() {
@@ -67,10 +65,5 @@
               el.classList.add("active");
           });
       }
-  }
-  function getMonth() {
-      var month = json_encode(<? echo $month ?>);
-
-      document.getElementById("month").innerText = 'Время года:' + month[document.getElementById("solution").getElementsByTagName("input")[0].value];
   }
 </script>
