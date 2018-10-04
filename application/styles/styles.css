@@ -54,15 +54,13 @@ footer h1 {
     counter-increment: item;
 }
 
-#left li a {
+#left li {
     text-decoration: none;
     color: #000000;
 }
 
-#left li a:hover {
-    text-decoration-color: #000000;
+#left li :hover {
     text-decoration-line: underline;
-    color: #000000;
 }
 
 #middle {
