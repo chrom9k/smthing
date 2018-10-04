@@ -24,7 +24,6 @@
       '',
   ];
   document.getElementById("left").addEventListener("click", function changeCont(elem){
-      console.log(this);
-      console.log(elem);
-  }); 
+      document.getElementById("exercice").innerText = ex[getComputedStyle(elem.target, ':before')];
+  });
 </script>
