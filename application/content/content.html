@@ -42,17 +42,15 @@
       'записью числа вхождений символа в исходную строку',
   ];
   document.getElementById("left").addEventListener("click", function changeCont(elem){
-      console.log(elem);
       var el = elem.target;
-      if (el.localName == "li"){
-          console.log(el.localName);
+      if (el.tagName == "LI"){
           document.getElementById("exercice").innerHTML = '<div>' + ex[el.value] + '</div>';
           var tablinks = document.getElementById("left").getElementsByTagName("li");
           console.log(tablinks);
           for (var i = 0; i < tablinks.length; i++){
-              tablinks[i].className.remove("active");
+              tablinks[i].classList.remove("active");
           }
-          el.className.add("active");
+          el.classList.add("active");
       }
 
   });
