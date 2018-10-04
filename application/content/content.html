@@ -1,9 +1,9 @@
 <div id="content" class="container">
   <div id="left">
     <ol class="container">
-      <li class="active"><a href="#">Задание</a></li>
+      <li class="active">Задание</li>
       <li>Задание</li>
-      <li>Задание</a></li>
+      <li>Задание</li>
       <li>Задание</li>
       <li>Задание</li>
     </ol>
@@ -26,7 +26,7 @@
   var lis = document.getElementById("left").getElementsByTagName("li");
   for (var i = 0; i < lis.length; i++) {
       lis[i].onclick = function (elem) {
-          document.getElementById("execice").innerText(ex[i]);
+          document.getElementById("execice").innerHTML(ex[i]);
           console.log(elem);
       };
    }
