@@ -1,11 +1,11 @@
 <div id="content" class="container">
   <div id="left">
     <ol class="container">
-      <li class="active" value="1">Задание</li>
+      <li class="active" value="0">Задание</li>
+      <li value="1">Задание</li>
       <li value="2">Задание</li>
       <li value="3">Задание</li>
       <li value="4">Задание</li>
-      <li value="5">Задание</li>
     </ol>
   </div>
   <div id="middle">
@@ -30,8 +30,8 @@
       tablinks = document.getElementById("left").getElementsByTagName("li");
       console.log(tablinks);
       for (var i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
+          tablinks[i].className = tablinks[i].className.remove("active");
       }
-      el.className += " active";
+      el.className.add("active");
   });
 </script>
