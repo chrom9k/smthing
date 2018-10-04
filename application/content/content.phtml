@@ -10,13 +10,7 @@
   </div>
   <div id="middle">
     <div id="exercice"></div>
-    <div id="solution">
-        <form action="/application/sols/first.php" target="_blank">
-            <label>Выберите номер месяца</label>
-            <input onchange="getMonth()" type="number" min="1" max="12" name="month" value="1"/>
-          <button style="float:right" type="submit">Send</button>
-        </form>
-    </div>
+    <div id="solution"></div>
   </div>
   <div id="right">
   </div>
@@ -48,6 +42,17 @@
       'должна быть заменена на текст«x(k)», где x- символ, а k- строка, являющаяся ' +
       'записью числа вхождений символа в исходную строку</div>',
   ];
+  var sol = [
+    '        <form action="/application/sols/first.php" target="_blank">\n' +
+    '            <label>Выберите номер месяца</label>\n' +
+    '            <input onchange="getMonth()" type="number" min="1" max="12" name="month" value="1"/>\n' +
+    '          <button style="float:right" type="submit">Send</button>\n' +
+    '        </form>',
+    '',
+    '',
+    '',
+    '',
+  ];
 
   window.onload = function (){
       document.getElementById("exercice").innerHTML =  ex[0];
@@ -59,6 +64,7 @@
           lis[num].addEventListener("click", function (elem) {
               var el = elem.target;
               document.getElementById("exercice").innerHTML = ex[el.value];
+              document.getElementById("solution").innerHTML = sol[el.value];
               for (var i = 0; i < lis.length; i++){
                 lis[i].classList.remove("active");
               }
