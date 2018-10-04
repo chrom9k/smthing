@@ -16,7 +16,7 @@
 </div>
 
 <script type="text/javascript">
-  var ex = [
+  let ex = [
       'Составить программу, которая по порядковому номеру месяца определяет время года, к которому относится этот месяц.',
       'Имеется n бактерий красного цвета. Через1 такт времени красная бактерия меняется на зелёную, затем через1 такт времени делится на красную и зелёную. Сколько будет всех бактерий через k тактов времени?',
       '',
@@ -25,9 +25,9 @@
   ];
   var lis = document.getElementById("left").getElementsByTagName("li");
   for (var i = 0; i < lis.length; i++) {
-      lis[i].onclick = function (elem) {
+      lis[i].onclick = function () {
           document.getElementById("exercice").innerHTML = ex[i];
-          console.log(elem);
+          console.log();
       };
    }
 </script>

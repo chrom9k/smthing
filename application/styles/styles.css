@@ -93,6 +93,10 @@ footer h1 {
     color: white;
 }
 
+#nav-main-menu li :hover {
+    text-decoration: underline;
+}
+
 #middle > div {
     display: none;
 }
