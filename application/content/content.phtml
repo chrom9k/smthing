@@ -11,9 +11,9 @@
   <div id="middle">
     <div id="exercice"></div>
     <div id="solution">
+        <label>Выберите номер месяца</label>
         <form action="/application/sols/first.php" target="_blank">
-          <label>Выберите номер месяца</label>
-          <input type="number" min="1" max="12" name="month" value="1" <? echo $currMonth?>"/>
+            <input type="number" min="1" max="12" name="month" value="<? echo $currMonth?>"/>
             <p>Месяц: <script>getMonth()</script></p>
           <button type="submit">Send</button>
         </form>
