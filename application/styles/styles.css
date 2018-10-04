@@ -33,7 +33,7 @@ body > div{
 }
 
 #content > div {
-    border: 1px solid #ddd;
+    border: 1px solid #dddddd;
     border-radius: 4px;
     margin: 10px;
     padding: 15px;
@@ -70,7 +70,6 @@ body > div{
 
 #middle {
     flex:2;
-    border: 1px solid transparent;
 }
 
 #right {
@@ -114,7 +113,8 @@ li.active {
 }
 
 #exercice > div {
-    border: 1px solid transparent;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
 }
 
 

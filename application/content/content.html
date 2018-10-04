@@ -44,9 +44,9 @@
 
   window.onload = function (){
       document.getElementById("exercice").innerHTML =  ex[0];
-      listererForLi();
+      listenerForLi();
   };
-  function listererForLi() {
+  function listenerForLi() {
       var lis = document.getElementById("left").getElementsByTagName("li");
       for (var num = 0; num < lis.length; num++) {
           lis[num].addEventListener("click", function (elem) {
