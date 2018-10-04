@@ -24,7 +24,12 @@
       '',
   ];
   document.getElementById("left").addEventListener("click", function changeCont(elem){
-      console.log(elem.target);
+      console.log(elem);
       document.getElementById("exercice").innerText = ex[elem.target.valueOf()];
+      tablinks = document.getElementById("left").getElementsByTagName("li");
+      for (var i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      elem.currentTarget.className += " active";
   });
 </script>
