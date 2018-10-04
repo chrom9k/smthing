@@ -25,11 +25,13 @@
   ];
   document.getElementById("left").addEventListener("click", function changeCont(elem){
       console.log(elem);
-      document.getElementById("exercice").innerText = ex[elem.target.valueOf()];
+      var el = elem.target;
+      document.getElementById("exercice").innerText = ex[el.value];
       tablinks = document.getElementById("left").getElementsByTagName("li");
+      console.log(tablinks);
       for (var i = 0; i < tablinks.length; i++) {
           tablinks[i].className = tablinks[i].className.replace(" active", "");
       }
-      elem.currentTarget.className += " active";
+      el.className += " active";
   });
 </script>
