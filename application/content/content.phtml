@@ -89,21 +89,13 @@
       var request = new XMLHttpRequest();
       var val = document.getElementById("input");
       console.log(val.value);
-      request.open('GET','/application/sols/first.php?test',true);
-      // request.addEventListener('readystatechange', function() {
-      //     if ((request.readyState==4) && (request.status==200)) {
-      //         var welcome = document.getElementById('welcome');
-      //         welcome.innerHTML = request.responseText;
-      //     }
-      // });
+      request.open('GET','/application/sols/first.php?function=test',true);
+      request.addEventListener('readystatechange', function() {
+          if ((request.readyState==4) && (request.status==200)) {
+              var welcome = document.getElementById('welcome');
+              welcome.innerHTML = request.responseText;
+          }
+      });
       request.send(val.value);
-
-      if (request.status != 200) {
-          // обработать ошибку
-          alert( request.status + ': ' + request.statusText ); // пример вывода: 404: Not Found
-      } else {
-          // вывести результат
-          alert( request.responseText ); // responseText -- текст ответа.
-      }
   }
 </script>
