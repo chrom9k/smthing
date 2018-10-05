@@ -64,7 +64,7 @@
 
   window.onload = function (){
       document.getElementById("exercice").innerHTML =  ex[0];
-      document.getElementById("solution").innerHTML = ex[0];
+      document.getElementById("solution").innerHTML = sol[0];
       listenerForLi();
   };
   function listenerForLi() {
@@ -89,7 +89,7 @@
       var request = new XMLHttpRequest();
       var val = document.getElementById("input");
       console.log(val.value);
-      request.open('GET','sol/first.php?test',true);
+      request.open('GET','/application/sols/first.php?test',true);
       // request.addEventListener('readystatechange', function() {
       //     if ((request.readyState==4) && (request.status==200)) {
       //         var welcome = document.getElementById('welcome');
