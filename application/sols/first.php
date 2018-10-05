@@ -15,3 +15,11 @@
     );
 
     echo "Выбранное время года: ".$month[$_GET['month']];
+
+    function test(){
+        echo 'smthing';
+
+        $result = $_GET;
+
+        return json_encode($result);
+    }

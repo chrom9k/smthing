@@ -45,7 +45,7 @@
   var sol = [
     '        <form action="/application/sols/first.php" target="_blank">\n' +
     '            <label>Выберите номер месяца</label>\n' +
-    '            <input onchange="getMonth()" type="number" min="1" max="12" name="month" value="1"/>\n' +
+    '            <input id="input" onchange="getMonth()" type="number" min="1" max="12" name="month" value="1"/>\n' +
     '          <button type="submit">Send</button>\n' +
     '        </form>',
     '',
@@ -54,10 +54,19 @@
     '',
   ];
 
+  var file = [
+    '/application/sols/first.php',
+    '/application/sols/first.php',
+    '/application/sols/first.php',
+    '/application/sols/first.php',
+    '/application/sols/first.php',
+  ];
+
   window.onload = function (){
       document.getElementById("exercice").innerHTML =  ex[0];
       document.getElementById("solution").innerHTML = ex[0];
       listenerForLi();
+      getMonth();
   };
   function listenerForLi() {
       var lis = document.getElementById("left").getElementsByTagName("li");
@@ -66,11 +75,36 @@
               var el = elem.target;
               document.getElementById("exercice").innerHTML = ex[el.value];
               document.getElementById("solution").innerHTML = sol[el.value];
+              // var div = document.createElement('<div>');
+              // div.id = "solution";
+              // div.innerHTML = "include(\'" + file[el.value] + "\');";
               for (var i = 0; i < lis.length; i++){
                 lis[i].classList.remove("active");
               }
               el.classList.add("active");
           });
+      }
+  }
+
+  function getMonth() {
+      var request = new XMLHttpRequest();
+      var val = document.getElementById("solution").getElementById("input");
+      console.log(val);
+      request.open('GET','first.php/test',true);
+      // request.addEventListener('readystatechange', function() {
+      //     if ((request.readyState==4) && (request.status==200)) {
+      //         var welcome = document.getElementById('welcome');
+      //         welcome.innerHTML = request.responseText;
+      //     }
+      // });
+      request.send(val);
+
+      if (request.status != 200) {
+          // обработать ошибку
+          alert( request.status + ': ' + request.statusText ); // пример вывода: 404: Not Found
+      } else {
+          // вывести результат
+          alert( request.responseText ); // responseText -- текст ответа.
       }
   }
 </script>
