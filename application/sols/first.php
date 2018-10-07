@@ -17,16 +17,10 @@
             12 => 'Зима',
         );
 
-        $numb = $_GET['month'];
-        $result =  'Выбранное время года: '.$month[( int )$numb];
+        $result =  'Выбранное время года: '.$month[$_GET['month']];
 
-        echo "<pre>";
-        var_dump($numb);
-        echo "</pre>";
-
-        echo json_encode(array(
-            'month1'   => $numb,
-            'month2'   => ( int )$numb,
-            'result'   =>  $result,
+        $r = json_encode(array(
+            'result'   =>  (string)$result,
             ), JSON_UNESCAPED_UNICODE);
+        echo $r;
     }
