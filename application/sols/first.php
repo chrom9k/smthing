@@ -17,10 +17,10 @@
             12 => 'Зима',
         );
 
-        $result =  'Выбранное время года: '.$month[$_GET['month']];
+        $result =  'Выбранное время года: '.$month[$_GET['month']].'. DAda, zima.';
 
         $r = json_encode(array(
-            'result'   =>  (string)$result,
+            'result'   =>  $result,
             ), JSON_UNESCAPED_UNICODE);
         echo $r;
     }
