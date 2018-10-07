@@ -20,5 +20,5 @@
 
         $result =  "Выбранное время года: ".$month[$_GET['month']];
 
-        return $result;
+        return json_encode(array('result'   =>  $result));
     }
