@@ -21,6 +21,7 @@
 
         $r = json_encode(array(
             'result'   =>  $result,
+            'month'   =>  $month[$_GET['month']],
             ), JSON_UNESCAPED_UNICODE);
         echo $r;
     }
