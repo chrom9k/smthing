@@ -1,6 +1,11 @@
 <?php
-    firstFunc();
-
+    echo "<pre>";
+    print_r ($_REQUEST);
+    echo "</pre>";
+    if (!empty($_POST)){
+        firstFunc();
+    }
+    
     function firstFunc(){
         $month = array(
             1 => 'Зима',
@@ -19,7 +24,7 @@
 
         $result =  'Выбранное время года: '.$month[$_POST['month']];
 
-        echo $_REQUEST;
+
 
         echo json_encode(array(
             'result'   =>  $result,
