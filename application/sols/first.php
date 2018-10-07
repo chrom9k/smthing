@@ -1,7 +1,4 @@
 <?php
-    echo "<pre>";
-    print_r ($_REQUEST);
-    echo "</pre>";
     if (!empty($_POST)){
         firstFunc();
     }
@@ -28,6 +25,5 @@
 
         echo json_encode(array(
             'result'   =>  $result,
-            'post'   =>  $_POST,
             ), JSON_UNESCAPED_UNICODE);
     }

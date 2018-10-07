@@ -43,9 +43,11 @@
       'записью числа вхождений символа в исходную строку</div>',
   ];
   var sol = [
-    '        <form action="/application/sols/first.php" target="_blank">\n' +
+    '        <form action="/application/sols/first.php" method="POST" target="_blank">\n' +
     '          <label>Выберите номер месяца</label>\n' +
-    '          <input id="input" onchange="getMonth()" type="number" min="1" max="12" name="month" value="1"/>\n' +
+    '          <div id="close-input">\n' +
+    '             <input id="input" onchange="getMonth()" type="number" min="1" max="12" name="month" value="1"/>\n' +
+    '          <div>\n'+
     '          <button type="submit">Send</button>\n' +
     '        </form>',
     '',
@@ -96,7 +98,9 @@
       request.responseType = 'text';
       request.addEventListener('readystatechange', function() {
           if ((request.readyState==4) && (request.status==200)) {
-              console.log(request.response);
+              var div = document.createElement('<div>');
+              div.innerHTML = request.responseText;
+              document.getElementById("close-input").appendChild(div);
           }
       });
       request.send(params);
