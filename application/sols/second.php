@@ -9,9 +9,9 @@
 
         $cache1 = $red_num;
         $cache2 = $red_num;
-        $cache3 = 0;
+        $cache3 = $red_num;
 
-        for ($i = 1; $i <= $takts_num; $i++) {
+        for ($i = 1; $i < $takts_num; $i++) {
             $cache3 = $cache1 + $cache2;
 
             $cache1 = $cache2;
