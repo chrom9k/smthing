@@ -89,7 +89,8 @@
       var request = new XMLHttpRequest();
       var val = document.getElementById("input");
       console.log(val.value);
-      request.open('GET','/application/sols/first.php',true);
+      var params = 'month='+val.value;
+      request.open('GET','/application/sols/first.php?'+params,true);
       request.responseType = 'text';
       request.addEventListener('readystatechange', function() {
           if ((request.readyState==4) && (request.status==200)) {
@@ -97,7 +98,7 @@
               console.log(request.responseText);
           }
       });
-      request.send(val.value);
+      request.send();
 
   }
 </script>
