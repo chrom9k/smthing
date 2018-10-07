@@ -26,9 +26,20 @@
 //        echo "</pre>";
 
         $numb = $_GET['month'];
-        echo  $numb;
         $result =  "Выбранное время года: ".$month[$_GET['month']];
 
+
+        echo "<pre>";
+        echo  $numb;
+        echo "</pre>";
+
+        echo "<pre>";
+        echo  json_encode($numb);
+        echo "</pre>";
+
+        echo "<pre>";
+        echo  $result;
+        echo "</pre>";
 
         echo json_encode(array('result'   =>  $result));
     }
