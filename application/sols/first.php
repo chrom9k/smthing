@@ -13,10 +13,11 @@
         11 => 'Осень',
         12 => 'Зима',
     );
-    echo  "Выбранное время года: ".$month[$_GET['month']];
+    echo $_GET;
     firstFunc();
 
     function firstFunc(){
+        echo "smthing";
         $month = array(
             1 => 'Зима',
             2 => 'Зима',
