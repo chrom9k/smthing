@@ -56,14 +56,6 @@
     '',
   ];
 
-  var file = [
-    '/application/sols/first.php',
-    '/application/sols/first.php',
-    '/application/sols/first.php',
-    '/application/sols/first.php',
-    '/application/sols/first.php',
-  ];
-
   window.onload = function (){
       document.getElementById("exercice").innerHTML =  ex[0];
       document.getElementById("solution").innerHTML = sol[0];
@@ -77,9 +69,6 @@
               var el = elem.target;
               document.getElementById("exercice").innerHTML = ex[el.value];
               document.getElementById("solution").innerHTML = sol[el.value];
-              // var div = document.createElement('<div>');
-              // div.id = "solution";
-              // div.innerHTML = "include(\'" + file[el.value] + "\');";
               for (var i = 0; i < lis.length; i++){
                 lis[i].classList.remove("active");
               }
@@ -97,7 +86,7 @@
       request.addEventListener('readystatechange', function() {
           if ((request.readyState==4) && (request.status==200)) {
               var result = JSON.parse(request.response);
-              document.getElementById('after-input').innerHTML = result['result'];
+              document.getElementById('after-input').innerHTML = result;
           }
       });
       request.send(params);

@@ -23,7 +23,5 @@
 
 
 
-        echo json_encode(array(
-            'result'   =>  $result,
-            ), JSON_UNESCAPED_UNICODE);
+        echo json_encode( $result, JSON_UNESCAPED_UNICODE);
     }
