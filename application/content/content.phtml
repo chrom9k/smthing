@@ -90,9 +90,7 @@
       var request = new XMLHttpRequest();
       var val = document.getElementById("input");
       console.log(val.value);
-      var params = {
-        month : val.value,
-      };
+      var params = 'month='+val.value;
       request.open('POST','/application/sols/first.php?',true);
       request.responseType = 'text';
       request.addEventListener('readystatechange', function() {

@@ -5,7 +5,7 @@
     if (!empty($_POST)){
         firstFunc();
     }
-    
+
     function firstFunc(){
         $month = array(
             1 => 'Зима',
