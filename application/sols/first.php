@@ -20,6 +20,7 @@
         $result =  'Выбранное время года: '.$month[$_GET['month']];
 
         echo json_encode(array(
-            'result'   =>  $month[$_GET['month']],
+            '$month'   =>  $month[$_GET['month']],
+            'result'   =>  $result,
             ), JSON_UNESCAPED_UNICODE);
     }
