@@ -18,14 +18,15 @@
         );
 
         $numb = $_GET['month'];
-        $result =  'Выбранное время года: '.$month[$numb];
+        $result =  'Выбранное время года: '.$month[( int )$numb];
 
         echo "<pre>";
         var_dump($numb);
         echo "</pre>";
 
         echo json_encode(array(
-            'month'   => $numb,
+            'month1'   => $numb,
+            'month2'   => ( int )$numb,
             'result'   =>  $result,
             ), JSON_UNESCAPED_UNICODE);
     }
