@@ -2,7 +2,6 @@
     firstFunc();
 
     function firstFunc(){
-        echo "smthing";
         $month = array(
             1 => 'Зима',
             2 => 'Зима',
@@ -17,6 +16,8 @@
             11 => 'Осень',
             12 => 'Зима',
         );
+
+        print_r($_GET);
 
         $result =  "Выбранное время года: ".$month[$_GET['month']];
 
