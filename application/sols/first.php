@@ -1,9 +1,5 @@
 <?php
     firstFunc();
-    echo json_encode(array('result'   =>  array(
-        'request'   => $_REQUEST,
-        'get'       => $_GET,
-    )));
 
     function firstFunc(){
         $month = array(
@@ -20,11 +16,19 @@
             11 => 'Осень',
             12 => 'Зима',
         );
+//
+//        echo "<pre>";
+//        print_r($_REQUEST);
+//        echo "</pre>";
+//
+//        echo "<pre>";
+//        print_r($_GET);
+//        echo "</pre>";
 
         $result =  "Выбранное время года: ".$month[$_GET['month']];
 
-        echo json_encode(array('result'   =>  array(
+        return json_encode(array('result'   =>  array(
             'request'   => $_REQUEST,
-            'get'       => $_GET,
+            'get'       => $_GET['month'],
         )));
     }
