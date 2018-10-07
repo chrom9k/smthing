@@ -16,14 +16,6 @@
             11 => 'Осень',
             12 => 'Зима',
         );
-//
-//        echo "<pre>";
-//        print_r($_REQUEST);
-//        echo "</pre>";
-//
-//        echo "<pre>";
-//        print_r($_GET);
-//        echo "</pre>";
 
         $numb = $_GET['month'];
         $result =  "Выбранное время года: ".$month[$_GET['month']];
@@ -41,5 +33,5 @@
         echo  $result;
         echo "</pre>";
 
-        echo json_encode(array('result'   =>  $result));
+        echo $result;
     }
