@@ -21,7 +21,11 @@
         print_r($_REQUEST);
         echo "</pre>";
 
+        echo "<pre>";
+        print_r($_GET);
+        echo "</pre>";
+
         $result =  "Выбранное время года: ".$month[$_GET['month']];
 
-        echo json_encode(array('result'   =>  $_REQUEST));
+        echo json_encode(array('result'   =>  $result));
     }
