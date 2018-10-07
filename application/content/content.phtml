@@ -43,30 +43,44 @@
       'записью числа вхождений символа в исходную строку</div>',
   ];
   var sol = [
-    '        <form action="/application/sols/first.php" method="POST" target="_blank" style="width:100%">\n' +
-    '          <div id="first" style="display: block">\n' +
-    '             <label>Выберите номер месяца</label>\n' +
-    '             <input id="input" type="number" min="1" max="12" name="month" value="1"/>\n' +
-    '             <div id="after-input" style="display: block">\n' +
-    '             </div>\n'+
-    '             <div class="container" style="justify-content: space-between">\n' +
-    '                <button type="button" onclick="getMonth()">JSSend</button>\n' +
-    '                <button type="submit">Send</button>\n' +
-    '             </div>\n' +
-    '          </div>\n' +
-    '        </form>',
-    '',
+    '<form action="/application/sols/first.php" method="POST" target="_blank" style="width:100%">\n' +
+    '  <div id="first" style="display: block">\n' +
+    '     <label>Выберите номер месяца</label>\n' +
+    '     <input id="month-input" type="number" min="1" max="12" value="1"/>\n' +
+    '     <div id="first-after-input" style="display: block">\n' +
+    '     </div>\n'+
+    '     <div class="container" style="justify-content: space-between">\n' +
+    '        <button type="button" onclick="getMonth()">jsSend</button>\n' +
+    '        <button type="submit">Send</button>\n' +
+    '     </div>\n' +
+    '  </div>\n' +
+    '</form>\n',
+    '<form action="/application/sols/second.php" method="POST" target="_blank" style="width:100%">\n'+
+    '  <div id="second" style="display: block">\n'+
+    '     <label>Введите количество красных:</label>\n' +
+    '     <input id="red-input" type="number" min="0" value="1"/>\n' +
+    '     <label>Введите количество тактов:</label>\n' +
+    '     <input id="takts-input" type="number" min="1" value="1"/>\n' +
+    '     <div id="second-after-input" style="display: block">\n' +
+    '     </div>\n'+
+    '     <div class="container" style="justify-content: space-between">\n' +
+    '        <button type="button" onclick="getBac()">jsSend</button>\n' +
+    '        <button type="submit">Send</button>\n' +
+    '     </div>\n' +
+    '  </div>\n'+
+    '</form>\n',
     '',
     '',
     '',
   ];
 
   window.onload = function (){
+      listenerForLi();
       document.getElementById("exercice").innerHTML =  ex[0];
       document.getElementById("solution").innerHTML = sol[0];
-      listenerForLi();
       getMonth();
   };
+
   function listenerForLi() {
       var lis = document.getElementById("left").getElementsByTagName("li");
       for (var num = 0; num < lis.length; num++) {
@@ -83,18 +97,28 @@
   }
 
   function getMonth() {
+      var val = document.getElementById("month-input");
+      var params = 'month=' + val.value;
+      doRq('first', params);
+  }
+
+  function getBac() {
+      var red = document.getElementById("red-input");
+      var takts = document.getElementById("takts-input");
+      var params = 'red=' + red.value + '&tatks='+takts.value;
+      doRq('second', params);
+  }
+
+  function doRq(name, params) {
       var request = new XMLHttpRequest();
-      var val = document.getElementById("input");
-      var params = 'month='+val.value;
-      request.open('POST','/application/sols/first.php',true);
+      request.open('POST','/application/sols/'+ name +'.php',true);
       request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
       request.addEventListener('readystatechange', function() {
           if ((request.readyState==4) && (request.status==200)) {
-              var result = JSON.parse(request.response);
-              document.getElementById('after-input').innerHTML = result;
+              document.getElementById(name +'-after-input').innerHTML = JSON.parse(request.response);
           }
       });
       request.send(params);
-
   }
+
 </script>
