@@ -66,6 +66,7 @@
       document.getElementById("exercice").innerHTML =  ex[0];
       document.getElementById("solution").innerHTML = sol[0];
       listenerForLi();
+      getMonth();
   };
   function listenerForLi() {
       var lis = document.getElementById("left").getElementsByTagName("li");
@@ -90,7 +91,7 @@
       var val = document.getElementById("input");
       console.log(val.value);
       var params = {
-        'month' : val.value,
+        month : val.value,
       };
       request.open('POST','/application/sols/first.php?',true);
       request.responseType = 'text';
