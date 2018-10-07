@@ -126,5 +126,13 @@ div {
     display: flex;
 }
 
+#first {
+    justify-content: space-between;
+}
+
+#after-input {
+    display: block;
+}
+
 
 
