@@ -44,9 +44,9 @@
   ];
   var sol = [
     '        <form action="/application/sols/first.php" target="_blank">\n' +
-    '            <label>Выберите номер месяца</label>\n' +
-    '            <input id="input" onchange="getMonth()" type="number" min="1" max="12" name="month" value="1"/>\n' +
-    '          <button onclick="getMonth()">Send</button>\n' +
+    '          <label>Выберите номер месяца</label>\n' +
+    '          <input id="input" onchange="getMonth()" type="number" min="1" max="12" name="month" value="1"/>\n' +
+    '          <button type="submit">Send</button>\n' +
     '        </form>',
     '',
     '',
@@ -89,7 +89,7 @@
       var request = new XMLHttpRequest();
       var val = document.getElementById("input");
       console.log(val.value);
-      request.open('GET','/application/sols/first.php?function=test',true);
+      request.open('GET','/application/sols/first',true);
       request.addEventListener('readystatechange', function() {
           if ((request.readyState==4) && (request.status==200)) {
               var welcome = document.getElementById('welcome');
@@ -97,5 +97,7 @@
           }
       });
       request.send(val.value);
+
+
   }
 </script>

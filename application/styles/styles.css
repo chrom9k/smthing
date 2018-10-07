@@ -25,7 +25,7 @@ body > div{
 .container {
     display: flex;
     justify-content: space-around;
-    flex-flow: row;
+    flex-flow: row wrap;
     align-items: center;
 }
 
