@@ -22,5 +22,5 @@
         echo json_encode(array(
             'result'   =>  $result,
             'somenumb'  => 1,
-            ), JSON_UNESCAPED_UNICODE);
+            ), JSON_UNESCAPED_UNICODE | JSON_NUMERIC_CHECK);
     }
