@@ -11,7 +11,7 @@
         $cache2 = $red_num;
         $cache3 = 0;
 
-        for ($i = 0; $i <= $takts_num - $red_num; $i++) {
+        for ($i = 1; $i < $takts_num - $red_num; $i++) {
             $cache3 = $cache1 + $cache2;
 
             $cache1 = $cache2;
