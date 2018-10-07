@@ -19,9 +19,10 @@
 
         $result =  'Выбранное время года: '.$month[$_POST['month']];
 
-        $r = json_encode(array(
+        echo $_REQUEST;
+
+        echo json_encode(array(
             'result'   =>  $result,
             'post'   =>  $_POST,
             ), JSON_UNESCAPED_UNICODE);
-        echo $r;
     }
