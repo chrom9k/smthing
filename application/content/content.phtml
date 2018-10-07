@@ -89,13 +89,13 @@
       var request = new XMLHttpRequest();
       var val = document.getElementById("input");
       console.log(val.value);
-
+      request.open('GET','/application/sols/first.php',true);
+      request.responseType = 'text';
       request.addEventListener('readystatechange', function() {
           if ((request.readyState==4) && (request.status==200)) {
               console.log(request.responseText);
           }
       });
-      request.open('GET','/application/sols/first.php',true);
       request.send(val.value);
 
   }
