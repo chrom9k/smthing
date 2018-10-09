@@ -8,7 +8,7 @@
         $N = $_GET['numb'];
         $n = (int)$N/2;
         $k = 1;
-        $arr = $arr[$N]$[N];
+        $arr = $arr[$N][$N];
         for ($i = 0; $i < $N; $i++) {
             for ($j = 0; $j < $N; $j++) {
                 $arr[$i][$j] = 0;
