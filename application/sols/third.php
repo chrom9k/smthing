@@ -2,6 +2,7 @@
     if (!empty($_GET)) {
         thirdFunc();
     }
+    echo 'Zashlo';
 
     function thirdFunc() {
         $N = $_GET['numb'];
