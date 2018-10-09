@@ -13,6 +13,7 @@
         for ($j = $i; $j + 1 <= $l; $j++) {
             if ($str[$j] == $str[$j + 1]) {
                 $k++;
+                echo k."\n";
             } else break;
         }
         if ($k > 1) {
