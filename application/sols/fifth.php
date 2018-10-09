@@ -8,7 +8,7 @@
     $k = 1;
     $new_str = '';
 
-    $l = $str.length;
+    $l = count($str);
     for ($i = 0; $i < $l;) {
         for ($j = $i; $j + 1 <= $l; $j++) {
             if ($str[$j] == $str[$j + 1]) {
