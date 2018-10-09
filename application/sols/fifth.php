@@ -11,6 +11,7 @@
     $l = count($str);
     for ($i = 0; $i < $l;) {
         for ($j = $i; $j + 1 <= $l; $j++) {
+            echo $str[$j]. " ". $str[$j+1]."\n";
             if ($str[$j] == $str[$j + 1]) {
                 $k++;
                 echo $k."\n";
