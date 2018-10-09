@@ -17,8 +17,11 @@
         }
         if ($k > 1) {
             $new_str .= $str[$i] ."(". $k .")";
-        } else 
+            echo $str[$i] ."(". $k .")";
+        } else {
             $new_str .= $str[$i];
+            echo $str[$i];
+        }
         $i += $k;
         $k = 1;
     }
