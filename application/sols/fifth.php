@@ -9,6 +9,7 @@
     $new_str = '';
 
     $l = count($str);
+        echo $l."\n";
     for ($i = 0; $i < $l;) {
         for ($j = $i; $j + 1 <= $l; $j++) {
             echo $str[$j]. " ". $str[$j+1]."\n";
