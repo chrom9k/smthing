@@ -4,7 +4,7 @@
     }
 
     function secondFunc(){
-        $takts_num = $_POST['tatks'];
+        $takts_num = $_POST['takts'];
         $red_num = $_POST['red'];
 
         $cache1 = $red_num;
