@@ -1,12 +1,12 @@
 <?php
-    if (!empty($_GET)) {
+    if (!empty($_POST)) {
         fourthFunc();
     }
 
     function fourthFunc() {
-        $x0 = $_GET['x_coord'];
-        $y0 = $_GET['y_coord'];
-        $r = $_GET['radius'];
+        $x0 = $_POST['x_coord'];
+        $y0 = $_POST['y_coord'];
+        $r = $_POST['radius'];
 
         if (abs($y0) - $r < 0) {
             $x1 = $x0 + ($r * $r - $y0**2)**(0.5);
