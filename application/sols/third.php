@@ -55,5 +55,7 @@
         }
         $r .= '</table>';
 
-        echo json_encode($r, JSON_UNESCAPED_UNICODE);
+        echo $r;
+
+//        echo json_encode($r, JSON_UNESCAPED_UNICODE);
     }
