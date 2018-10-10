@@ -3,15 +3,12 @@
         fifthFunc();
     }
 
-    echo 'fifth';
-
     function fifthFunc() {
     $str = $_POST['string'];
     $k = 1;
     $new_str = '';
 
     $l = strlen($str);
-    echo $l;
     for ($i = 0; $i < $l;) {
         for ($j = $i; $j + 1 <= $l; $j++) {
             if ($str[$j] == $str[$j + 1]) {
@@ -28,6 +25,6 @@
     }
     echo $new_str;
     $new_str = 'Получившаяся строка: '. $new_str;
-
+    echo $new_str;
     echo json_encode($new_str, JSON_UNESCAPED_UNICODE);
 }
