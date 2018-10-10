@@ -23,5 +23,5 @@
         $i += $k;
         $k = 1;
     }
-    echo json_encode($new_str);
+    echo json_encode('Получившаяся строка: '. $new_str);
 }

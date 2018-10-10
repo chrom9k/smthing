@@ -41,6 +41,19 @@
             $i--;
             $j++;
         }
-        
-        echo json_encode($arr);
+
+        $r = '<table>';
+
+        for ($i = 0; $i < $N; $i++) {
+            $r .= '<th>';
+            for ($j = 0; $j < $N; $j++) {
+                $r .= '<td>';
+                $r .= $arr[$i][$j];
+                $r .= '</td>';
+            }
+            $r .= '</th>';
+        }
+        $r .= '</table>';
+
+        echo json_encode($r);
     }
