@@ -45,15 +45,15 @@
         $r = '<table>';
 
         for ($i = 0; $i < $N; $i++) {
-            $r .= '<th>';
+            $r .= '<tr>';
             for ($j = 0; $j < $N; $j++) {
                 $r .= '<td>';
                 $r .= $arr[$i][$j];
                 $r .= '</td>';
             }
-            $r .= '</th>';
+            $r .= '</tr>';
         }
         $r .= '</table>';
 
-        echo json_encode($r);
+        echo json_encode($r, JSON_UNESCAPED_UNICODE);
     }
