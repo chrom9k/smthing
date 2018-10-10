@@ -3,6 +3,8 @@
         fifthFunc();
     }
 
+    echo 'fifth';
+
     function fifthFunc() {
     $str = $_POST['string'];
     $k = 1;
