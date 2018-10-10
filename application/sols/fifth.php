@@ -23,8 +23,7 @@
         $i += $k;
         $k = 1;
     }
-    echo $new_str;
     $new_str = 'Получившаяся строка: '. $new_str;
-    echo $new_str;
+
     echo json_encode($new_str, JSON_UNESCAPED_UNICODE);
 }
