@@ -43,7 +43,7 @@
       'записью числа вхождений символа в исходную строку</div>',
   ];
   var sol = [
-    '<form action="/application/sols/first.php" method="POST" enctype="multipart/form-data" target="_blank" style="width:100%">' +
+    '<form action="/application/sols/first.php" method="POST" target="_blank" style="width:100%">' +
     '  <div id="first" style="display: block">' +
     '     <label>Выберите номер месяца</label>' +
     '     <input id="month-input" type="number" min="1" max="12" name="month" value="1"/>' +
@@ -55,7 +55,7 @@
     '     </div>' +
     '  </div>' +
     '</form>',
-    '<form action="/application/sols/second.php" method="POST" enctype="multipart/form-data" target="_blank" style="width:100%">'+
+    '<form action="/application/sols/second.php" method="POST" target="_blank" style="width:100%">'+
     '  <div id="second" style="display: block">'+
     '     <div style="display: block">'+
     '        <label>Введите количество красных:</label>' +
@@ -73,7 +73,7 @@
     '     </div>' +
     '  </div>'+
     '</form>',
-    '<form action="/application/sols/third.php" method="POST" enctype="multipart/form-data" target="_blank" style="width:100%">'+
+    '<form action="/application/sols/third.php" method="POST" target="_blank" style="width:100%">'+
     '  <div id="third" style="display: block">'+
     '     <div style="display: block">'+
     '        <label>Введите N:</label>' +
@@ -87,7 +87,7 @@
     '     </div>' +
     '  </div>'+
     '</form>',
-    '<form action="/application/sols/fourth.php" method="POST" enctype="multipart/form-data" target="_blank" style="width:100%">'+
+    '<form action="/application/sols/fourth.php" method="POST" target="_blank" style="width:100%">'+
     '  <div id="fourth" style="display: block">'+
     '     <div style="display: block">'+
     '        <label>Введите x:</label>' +
@@ -109,7 +109,7 @@
     '     </div>' +
     '  </div>'+
     '</form>',
-    '<form action="/application/sols/fifth.php" method="POST" enctype="multipart/form-data" target="_blank" style="width:100%">'+
+    '<form action="/application/sols/fifth.php" method="POST" target="_blank" style="width:100%">'+
     '  <div id="fifth" style="display: block">'+
     '     <div style="display: block">'+
     '        <label>Введите исходную строку:</label>' +
@@ -183,10 +183,10 @@
   function doRq(name, params) {
       var request = new XMLHttpRequest();
       request.open('POST','/application/sols/'+ name +'.php',true);
-      request.setRequestHeader('Content-Type', 'multipart/form-data');
+      request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
       request.addEventListener('readystatechange', function() {
           if ((request.readyState==4) && (request.status==200)) {
-              document.getElementById(name +'-after-input').innerHTML = request.response;
+              document.getElementById(name +'-after-input').innerHTML = JSON.parse(request.response);
               console.log(request.response);
               console.log(request.responseText);
               console.log(request.responseType);
