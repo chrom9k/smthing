@@ -53,7 +53,7 @@
             }
             $r .= '</tr>';
         }
-        $r .= '</table>';
+        $r .= '</table>'; 
 
         echo json_encode($r, JSON_UNESCAPED_UNICODE);
     }
