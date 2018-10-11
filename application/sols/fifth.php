@@ -1,6 +1,6 @@
 <?php
     if (!empty($_POST)) {
-        echo fifthFunc();
+        fifthFunc();
     }
 
     function fifthFunc() {
@@ -26,6 +26,7 @@
 
 //        echo json_encode($new_str, JSON_UNESCAPED_UNICODE);
 
-        return json_encode("Получившаяся строка: ", JSON_UNESCAPED_UNICODE);
+        echo json_encode("Получившаяся строка: ", JSON_UNESCAPED_UNICODE);
 
     }
+    return 1;
