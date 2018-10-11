@@ -186,7 +186,7 @@
       request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
       request.addEventListener('readystatechange', function() {
           if ((request.readyState==4) && (request.status==200)) {
-              document.getElementById(name +'-after-input').innerHTML = JSON.parse(request.response['result']);
+              document.getElementById(name +'-after-input').innerHTML = request.response['result'];
           }
       });
       request.send(params);
