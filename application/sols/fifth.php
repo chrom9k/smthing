@@ -1,12 +1,13 @@
 <?php
-    if (!empty($_GET)) {
+    if (!empty($_POST)) {
         fifthFunc();
     }
 
     function fifthFunc() {
-    $str = $_GET['string'];
+    $str = $_POST['string'];
     $k = 1;
     $new_str = '';
+    echo $str;
 
     $l = strlen($str);
     for ($i = 0; $i < $l;) {
@@ -23,7 +24,6 @@
         $i += $k;
         $k = 1;
     }
-    $new_str = 'Получившаяся строка: ';
-    echo $new_str;
-    echo json_encode($new_str, JSON_UNESCAPED_UNICODE);
+
+    echo json_encode('Получившаяся строка: '. $new_str, JSON_UNESCAPED_UNICODE);
 }
