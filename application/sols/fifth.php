@@ -24,6 +24,6 @@
         $k = 1;
     }
     $new_str = 'Получившаяся строка: ';
-
+    echo $new_str;
     echo json_encode($new_str, JSON_UNESCAPED_UNICODE);
 }
