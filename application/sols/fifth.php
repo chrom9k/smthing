@@ -1,6 +1,6 @@
 <?php
     if (!empty($_POST)) {
-        fifthFunc();
+        echo fifthFunc();
     }
 
     function fifthFunc() {
