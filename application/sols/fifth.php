@@ -24,5 +24,5 @@
             $k = 1;
         }
 
-        echo json_encode("Получившаяся строка: '". $new_str ."'",JSON_UNESCAPED_UNICODE);
+        echo json_encode("Получившаяся строка: \"". $new_str ."\"",JSON_UNESCAPED_UNICODE);
     }
