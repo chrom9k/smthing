@@ -1,10 +1,10 @@
 <?php
-    if (!empty($_POST)) {
+    if (!empty($_GET)) {
         fifthFunc();
     }
 
     function fifthFunc() {
-    $str = $_POST['string'];
+    $str = $_GET['string'];
     $k = 1;
     $new_str = '';
 
