@@ -134,4 +134,12 @@ div {
     margin: 5px;
 }
 
+td {
+    padding: 5px;
+    border: 1px solid;
+    text-align: center;
+}
 
+table {
+    border-collapse: collapse;
+}
