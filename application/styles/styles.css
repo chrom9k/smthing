@@ -15,7 +15,7 @@ body > div{
 #footer {
     width: 100%;
     height: 100px;
-    background-color: black;
+    background-color: #1c51b3;
 }
 
 #footer h1 {
@@ -81,7 +81,7 @@ body > div{
 #nav-main {
     width: 100%;
     height: 50px;
-    background-color: black;
+    background-color: #1c51b3;
 }
 
 #nav-main-menu {
@@ -130,7 +130,7 @@ div {
     justify-content: space-between;
 }
 
-#solution div {
+#solution>div {
     margin: 5px;
 }
 

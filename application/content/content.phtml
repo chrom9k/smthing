@@ -21,8 +21,8 @@
       '<div>Составить программу, которая по порядковому номеру месяца определяет время года, к которому относится этот месяц.</div>',
       '<div>Имеется n бактерий красного цвета. Через 1 такт времени красная бактерия меняется на зелёную, затем через 1 такт ' +
       'времени делится на красную и зелёную. Сколько будет всех бактерий через k тактов времени?</div>',
-      '<div>Заполнить двумерный массив размерностью NxN(N нечётное число) ' +
-      'целыми числами от1 до N*N по следующим правилам:<br>' +
+      '<div>Заполнить двумерный массив размерностью NxN (N нечётное число) ' +
+      'целыми числами от 1 до N*N по следующим правилам:<br>' +
       'a) единица помещается в среднюю клетку первой строки;<br>' +
       'b) заполнение массива происходит по диагоналям вправо и вверх;<br>' +
       'c) при достижении верхней строки следующее число помещается в нижнюю ' +
@@ -43,36 +43,36 @@
       'записью числа вхождений символа в исходную строку</div>',
   ];
   var sol = [
-    '<form action="/application/sols/first.php" method="POST" target="_blank" style="width:100%">\n' +
-    '  <div id="first" style="display: block">\n' +
-    '     <label>Выберите номер месяца</label>\n' +
-    '     <input id="month-input" type="number" min="1" max="12" name="month" value="1"/>\n' +
-    '     <div id="first-after-input" style="display: block">\n' +
-    '     </div>\n'+
-    '     <div class="container" style="justify-content: space-between">\n' +
-    '        <button type="button" onclick="getMonth()">jsSend</button>\n' +
-    '        <button type="submit">Send</button>\n' +
-    '     </div>\n' +
-    '  </div>\n' +
-    '</form>\n',
-    '<form action="/application/sols/second.php" method="POST" target="_blank" style="width:100%">\n'+
-    '  <div id="second" style="display: block">\n'+
-    '     <div style="display: block">\n'+
-    '        <label>Введите количество красных:</label>\n' +
-    '        <input id="red-input" type="number" min="0" name="red" value="1"/>\n' +
-    '     </div>\n'+
-    '     <div style="display: block">\n'+
-    '        <label>Введите количество тактов:</label>\n' +
-    '        <input id="takts-input" type="number" min="1" name="takts" value="1"/>\n' +
-    '     </div">\n'+
-    '     <div id="second-after-input" style="display: block">\n' +
-    '     </div>\n'+
-    '     <div class="container" style="justify-content: space-between">\n' +
-    '        <button type="button" onclick="getBac()">jsSend</button>\n' +
-    '        <button type="submit">Send</button>\n' +
-    '     </div>\n' +
-    '  </div>\n'+
-    '</form>\n',
+    '<form action="/application/sols/first.php" method="POST" target="_blank" style="width:100%">' +
+    '  <div id="first" style="display: block">' +
+    '     <label>Выберите номер месяца</label>' +
+    '     <input id="month-input" type="number" min="1" max="12" name="month" value="1"/>' +
+    '     <div id="first-after-input" style="display: block">' +
+    '     </div>'+
+    '     <div class="container" style="justify-content: space-between">' +
+    '        <button type="button" onclick="getMonth()">jsSend</button>' +
+    '        <button type="submit">Send</button>' +
+    '     </div>' +
+    '  </div>' +
+    '</form>',
+    '<form action="/application/sols/second.php" method="POST" target="_blank" style="width:100%">'+
+    '  <div id="second" style="display: block">'+
+    '     <div style="display: block">'+
+    '        <label>Введите количество красных:</label>' +
+    '        <input id="red-input" type="number" min="0" name="red" value="1"/>' +
+    '     </div>'+
+    '     <div style="display: block">'+
+    '        <label>Введите количество тактов:</label>' +
+    '        <input id="takts-input" type="number" min="1" name="takts" value="1"/>' +
+    '     </div>'+
+    '     <div id="second-after-input" style="display: block">' +
+    '     </div>'+
+    '     <div class="container" style="justify-content: space-between">' +
+    '        <button type="button" onclick="getBac()">jsSend</button>' +
+    '        <button type="submit">Send</button>' +
+    '     </div>' +
+    '  </div>'+
+    '</form>',
     '',
     '',
     '',
@@ -109,7 +109,7 @@
   function getBac() {
       var red = document.getElementById("red-input");
       var takts = document.getElementById("takts-input");
-      var params = 'red=' + red.value + '&tatks='+takts.value;
+      var params = 'red=' + red.value + '&takts='+takts.value;
       doRq('second', params);
   }
 
