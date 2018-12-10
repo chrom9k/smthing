@@ -141,9 +141,7 @@
 		<div class="main">
 			<div class="right-panel">
 				<div class="rp-content">
-					<!-- <div class="news-box">Новости</div> -->
 					<div id="content-box">
-						<center>
 						<?php
 							if (empty($_SESSION["username"])) {
 								?>
@@ -301,7 +299,6 @@
 								}
 							}
 						?>
-						</center>	
 					</div>
 				</div>
 			</div>
