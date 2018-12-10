@@ -24,12 +24,13 @@
 		$str = 1;
 
 		while ($i < count($words)) {
-			if ((strlen($tmp_str) + strlen($words[$i])) <= 80 * $str) {
+			if ((strlen($tmp_str) + strlen($words[$i]) + 1) <= 80 * $str) {
                 $tmp_str .= $words[$i];
 				if (strlen($tmp_str) < 80 * $str && strlen($tmp_str) != 80 * $str)
                     $tmp_str .= ' ';
 			} else {
-                $tmp_str .= "\n";
+                $new_str .= $tmp_str. "\n";
+                $tmp_str = "";
                 $str++;
 			}
 			$i++;
