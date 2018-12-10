@@ -14,7 +14,7 @@
 <html>
 <head>
 	<meta charset="windows-1251">
-	<title>Form</title>
+	<title>3.3</title>
 </head>
 <body>
 	<form action="generator.php" method="POST">

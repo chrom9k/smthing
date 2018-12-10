@@ -8,7 +8,7 @@
 <html>
     <head>
         <meta charset="windows-1251">
-        <title>Form</title>
+        <title>3.4</title>
     </head>
     <body>
         <form action="calc.php" method="POST">

@@ -113,7 +113,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Система тестирования</title>
+	<title>4</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 	<style type="text/css">
 		#content {

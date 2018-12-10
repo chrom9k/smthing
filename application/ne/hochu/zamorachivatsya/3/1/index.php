@@ -8,7 +8,7 @@
 <html>
     <head>
         <meta charset="windows-1251">
-        <title>Form</title>
+        <title>3.1</title>
     </head>
     <body>
         <form action="validate.php" method="POST">
