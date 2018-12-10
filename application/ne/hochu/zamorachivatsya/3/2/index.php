@@ -29,7 +29,7 @@
 			} else {
 				$i--;
 				$linesymbols -= 1;
-				$spaces = 79 - $linesymbols;
+				$spaces = 80 - $linesymbols;
 				$linespaces = count($line) - 1;
 				for ($j = 0; $j<count($line); $j++) {
 					if ($j < count($line) - 1) {
@@ -53,7 +53,7 @@
 		
 		if (count($line) > 0) {
 			$linesymbols -= 1;
-			$spaces = 80 - $linesymbols;
+			$spaces = 79 - $linesymbols;
 			$linespaces = count($line) - 1;
 			for ($j = 0; $j<count($line); $j++) {
 					if ($j < count($line) - 1) {
