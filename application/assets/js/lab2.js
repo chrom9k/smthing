@@ -132,7 +132,7 @@ function listenerForLi() {
 function listener() {
     var lis = document.getElementById("mySelector");
     lis.addEventListener("change", function () {
-        alert();
+        alert(lis.value);
         document.getElementById("second").style.display = "none";
         document.getElementById("third").style.display = "none";
         document.getElementById("fourth").style.display = "none";
