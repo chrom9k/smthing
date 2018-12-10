@@ -288,7 +288,7 @@
 												echo $interval->format("%h часов, %i минут и  %s секунд");
 											?>
 											</p>
-											<a href="/application/ne/hochu/zamorachivatsya/4/index.php">Возврат</a>
+											<a href="/application/ne/hochu/zamorachivatsya/4/index.php">Пройти тест повторно.</a>
 										<?php
 											session_destroy();
 										break;
