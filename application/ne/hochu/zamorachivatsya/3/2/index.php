@@ -27,7 +27,7 @@
 			if ((strlen($new_str) + strlen($words[$i]) + 1) <= 80 * $str) {
 				$new_str .= $words[$i]. ' ';
 			} else {
-                $new_str .= '\n';
+                $new_str .= "\n";
                 $str++;
 			}
 			$i++;
