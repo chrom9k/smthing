@@ -23,7 +23,7 @@
 		$linespaces = 0;
 		
 		for ($i = 0; $i<count($words); $i++) {
-			if ($linesymbols +  iconv_strlen($words[$i]) < 80) {
+			if ($linesymbols +  iconv_strlen($words[$i]) < 81) {
 				array_push($line, $words[$i]);
 				$linesymbols += iconv_strlen($words[$i]) + 1;
 			} else {
@@ -53,7 +53,7 @@
 		
 		if (count($line) > 0) {
 			$linesymbols -= 1;
-			$spaces = 79 - $linesymbols;
+			$spaces = 80 - $linesymbols;
 			$linespaces = count($line) - 1;
 			for ($j = 0; $j<count($line); $j++) {
 					if ($j < count($line) - 1) {
