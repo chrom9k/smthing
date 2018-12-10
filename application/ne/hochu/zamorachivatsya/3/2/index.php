@@ -10,7 +10,7 @@
 ?>
 
 <?php
-	$str ="";
+	$tmp_str ="";
 	$new_str = "";
 
 	if (!empty($_POST["text"])) {
@@ -24,10 +24,12 @@
 		$str = 1;
 
 		while ($i < count($words)) {
-			if ((strlen($new_str) + strlen($words[$i]) + 1) <= 80 * $str) {
-				$new_str .= $words[$i]. ' ';
+			if ((strlen($tmp_str) + strlen($words[$i])) <= 80 * $str) {
+                $tmp_str .= $words[$i];
+				if (strlen($tmp_str) < 80 * $str && strlen($tmp_str) != 80 * $str)
+                    $tmp_str .= ' ';
 			} else {
-                $new_str .= "\n";
+                $tmp_str .= "\n";
                 $str++;
 			}
 			$i++;
