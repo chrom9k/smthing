@@ -33,11 +33,11 @@
 					if ($i == $j) {
 						?><td bgcolor="#00FF00"><?php
 					} elseif (($i + $j) == ($M - 1)) {
-						?><td bgcolor="#0000FF"><?php
+						?><td bgcolor="#2f5bff"><?php
 					} elseif (($j > $i) || ($i > $j)) {
-						?><td bgcolor="#555555"><?php
+						?><td bgcolor="#ffd020"><?php
 					} else {
-						?><td bgcolor="#FFFFFF"><?php
+						?><td bgcolor="#fff"><?php
 					}
 
 					echo $arr[$i][$j]; ?></td>

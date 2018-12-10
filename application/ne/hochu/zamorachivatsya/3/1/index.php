@@ -12,11 +12,11 @@
 </head>
 <body>
 	<form action="validate.php" method="POST">
-		ФИО: <input type="text" name="fio"><br>
-		E-mail: <input type="text" name="email"><br>
-		Телефон: <input type="text" name="phone">
+		<div>ФИО: <input type="text" name="fio"></div>
+        <div>E-mail: <input type="text" name="email"></div>
+        <div>Телефон: <input type="text" name="phone"></div>
 
-		<button type="submit">Send</button>
+        <div><button type="submit">Send</button></div>
 	</form>
 </body>
 </html>
