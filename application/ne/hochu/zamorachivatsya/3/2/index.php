@@ -23,7 +23,7 @@
 		$linespaces = 0;
 		
 		for ($i = 0; $i<count($words); $i++) {
-			if ($linesymbols +  iconv_strlen($words[$i]) < 81) {
+			if ($linesymbols +  iconv_strlen($words[$i]) < 80) {
 				array_push($line, $words[$i]);
 				$linesymbols += iconv_strlen($words[$i]) + 1;
 			} else {
