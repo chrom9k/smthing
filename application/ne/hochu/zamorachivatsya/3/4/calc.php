@@ -20,7 +20,8 @@
 			# code...
 			break;
 	}
-
+	
+	echo "<title>3.4(R)</title>"
 	echo "Ответ: $res\n";
 
 ?>
