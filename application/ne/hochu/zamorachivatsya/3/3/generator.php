@@ -49,8 +49,8 @@
 
 		?>
 	</table>
-	<span>Количество чётных: <?php echo $chet; ?></span><br>
-	<span>Количество нечётных: <?php echo $nechet; ?></span>
+	<span>РљРѕР»РёС‡РµСЃС‚РІРѕ С‡С‘С‚РЅС‹С…: <?php echo $chet; ?></span><br>
+	<span>РљРѕР»РёС‡РµСЃС‚РІРѕ РЅРµС‡С‘С‚РЅС‹С…: <?php echo $nechet; ?></span>
 </body>
 </html>
 

@@ -21,6 +21,6 @@
 			break;
 	}
 
-	echo "Îòâåò: $res\n";
+	echo "ÐžÑ‚Ð²ÐµÑ‚: $res\n";
 
 ?>

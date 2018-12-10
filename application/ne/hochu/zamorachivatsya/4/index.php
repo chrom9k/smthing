@@ -1,10 +1,10 @@
 <?php
 	session_start();
 
-	# Необходимо на языке PHP реализовать простейшую систему тестирования с выполнением следующих требований:
-	# 1. На главной странице необходимо реализовать запрос имени тестируемого. Это имя должно далее появляться на всех страницах с тестами.
-	# 2. Необходимо сделать минимум 10 вопросов. Вопросы должны быть следующих видов: вопрос с одним правильным ответом, вопрос с несколькими правильными ответами, вопрос со вводом прямого варианта ответа.
-	# 3. После ответа на все вопросы должна появляться страница с результатами тестирования. На ней должна отображаться следующая правильная информация: количество правильных ответов, номера вопросов, в которых были допущены ошибки, время прохождения теста.
+	# РќРµРѕР±С…РѕРґРёРјРѕ РЅР° СЏР·С‹РєРµ PHP СЂРµР°Р»РёР·РѕРІР°С‚СЊ РїСЂРѕСЃС‚РµР№С€СѓСЋ СЃРёСЃС‚РµРјСѓ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ СЃ РІС‹РїРѕР»РЅРµРЅРёРµРј СЃР»РµРґСѓСЋС‰РёС… С‚СЂРµР±РѕРІР°РЅРёР№:
+	# 1. РќР° РіР»Р°РІРЅРѕР№ СЃС‚СЂР°РЅРёС†Рµ РЅРµРѕР±С…РѕРґРёРјРѕ СЂРµР°Р»РёР·РѕРІР°С‚СЊ Р·Р°РїСЂРѕСЃ РёРјРµРЅРё С‚РµСЃС‚РёСЂСѓРµРјРѕРіРѕ. Р­С‚Рѕ РёРјСЏ РґРѕР»Р¶РЅРѕ РґР°Р»РµРµ РїРѕСЏРІР»СЏС‚СЊСЃСЏ РЅР° РІСЃРµС… СЃС‚СЂР°РЅРёС†Р°С… СЃ С‚РµСЃС‚Р°РјРё.
+	# 2. РќРµРѕР±С…РѕРґРёРјРѕ СЃРґРµР»Р°С‚СЊ РјРёРЅРёРјСѓРј 10 РІРѕРїСЂРѕСЃРѕРІ. Р’РѕРїСЂРѕСЃС‹ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ СЃР»РµРґСѓСЋС‰РёС… РІРёРґРѕРІ: РІРѕРїСЂРѕСЃ СЃ РѕРґРЅРёРј РїСЂР°РІРёР»СЊРЅС‹Рј РѕС‚РІРµС‚РѕРј, РІРѕРїСЂРѕСЃ СЃ РЅРµСЃРєРѕР»СЊРєРёРјРё РїСЂР°РІРёР»СЊРЅС‹РјРё РѕС‚РІРµС‚Р°РјРё, РІРѕРїСЂРѕСЃ СЃРѕ РІРІРѕРґРѕРј РїСЂСЏРјРѕРіРѕ РІР°СЂРёР°РЅС‚Р° РѕС‚РІРµС‚Р°.
+	# 3. РџРѕСЃР»Рµ РѕС‚РІРµС‚Р° РЅР° РІСЃРµ РІРѕРїСЂРѕСЃС‹ РґРѕР»Р¶РЅР° РїРѕСЏРІР»СЏС‚СЊСЃСЏ СЃС‚СЂР°РЅРёС†Р° СЃ СЂРµР·СѓР»СЊС‚Р°С‚Р°РјРё С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ. РќР° РЅРµР№ РґРѕР»Р¶РЅР° РѕС‚РѕР±СЂР°Р¶Р°С‚СЊСЃСЏ СЃР»РµРґСѓСЋС‰Р°СЏ РїСЂР°РІРёР»СЊРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ: РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂР°РІРёР»СЊРЅС‹С… РѕС‚РІРµС‚РѕРІ, РЅРѕРјРµСЂР° РІРѕРїСЂРѕСЃРѕРІ, РІ РєРѕС‚РѕСЂС‹С… Р±С‹Р»Рё РґРѕРїСѓС‰РµРЅС‹ РѕС€РёР±РєРё, РІСЂРµРјСЏ РїСЂРѕС…РѕР¶РґРµРЅРёСЏ С‚РµСЃС‚Р°.
 
 
 	if (!empty($_POST["username"])) {
@@ -67,7 +67,7 @@
 				}
 				break;
 			case 7:
-				if ($_POST["text"] == "верно") {
+				if ($_POST["text"] == "РІРµСЂРЅРѕ") {
 					$_SESSION["true"]++;
 				} else {
 					$_SESSION["errors"][$_SESSION["count_errors"]] = $_SESSION["number"];
@@ -75,7 +75,7 @@
 				}
 				break;
 			case 8:
-				if ($_POST["text"] == "верно") {
+				if ($_POST["text"] == "РІРµСЂРЅРѕ") {
 					$_SESSION["true"]++;
 				} else {
 					$_SESSION["errors"][$_SESSION["count_errors"]] = $_SESSION["number"];
@@ -83,7 +83,7 @@
 				}
 				break;
 			case 9:
-				if ($_POST["text"] == "верно") {
+				if ($_POST["text"] == "РІРµСЂРЅРѕ") {
 					$_SESSION["true"]++;
 				} else {
 					$_SESSION["errors"][$_SESSION["count_errors"]] = $_SESSION["number"];
@@ -113,7 +113,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Система тестирования</title>
+	<title>РЎРёСЃС‚РµРјР° С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 	<link rel="icon" type="image/png" href="favicon.ico">
 	<style type="text/css">
@@ -131,9 +131,9 @@
 	<div id="content">
 		<div class="top-panel">
 			<div style="padding: 5px 5px;">
-				<div style="float:left" id="ptitle"><?php if (empty($_SESSION["username"])) { echo "Тест"; } else { echo $_SESSION["username"]; } ?></div>
+				<div style="float:left" id="ptitle"><?php if (empty($_SESSION["username"])) { echo "РўРµСЃС‚"; } else { echo $_SESSION["username"]; } ?></div>
 				<div style="float:right">
-					<?php if (!empty($_SESSION["username"]) && ($_SESSION["number"] <= 10)) { echo "Вопрос №".$_SESSION["number"]; } ?>
+					<?php if (!empty($_SESSION["username"]) && ($_SESSION["number"] <= 10)) { echo "Р’РѕРїСЂРѕСЃ в„–".$_SESSION["number"]; } ?>
 				</div>
 
 			</div>
@@ -141,15 +141,15 @@
 		<div class="main">
 			<div class="right-panel">
 				<div class="rp-content">
-					<!-- <div class="news-box">Новости</div> -->
+					<!-- <div class="news-box">РќРѕРІРѕСЃС‚Рё</div> -->
 					<div id="content-box">
 						<center>
 						<?php
 							if (empty($_SESSION["username"])) {
 								?>
 								<form action="index.php" method="POST">
-									<p>Введите имя: <input type="text" name="username">
-									<button type="submit">Начать тестирование</button></p>
+									<p>Р’РІРµРґРёС‚Рµ РёРјСЏ: <input type="text" name="username">
+									<button type="submit">РќР°С‡Р°С‚СЊ С‚РµСЃС‚РёСЂРѕРІР°РЅРёРµ</button></p>
 								</form>
 						<?php
 							} else {
@@ -157,123 +157,123 @@
 									case 1:
 										?>
 										<form action="index.php" method="POST">
-											<p><b>Вопрос номер один?</b></p>
-											<p><input name="var1" type="radio" value="var1">Верно</p>
-											<p><input name="var2" type="radio" value="var2">Неверно</p>
-											<p><input name="var3" type="radio" value="var3">Неверно</p>
-											<p><input type="submit" value="Отправить"></p>
+											<p><b>Р’РѕРїСЂРѕСЃ РЅРѕРјРµСЂ РѕРґРёРЅ?</b></p>
+											<p><input name="var1" type="radio" value="var1">Р’РµСЂРЅРѕ</p>
+											<p><input name="var2" type="radio" value="var2">РќРµРІРµСЂРЅРѕ</p>
+											<p><input name="var3" type="radio" value="var3">РќРµРІРµСЂРЅРѕ</p>
+											<p><input type="submit" value="РћС‚РїСЂР°РІРёС‚СЊ"></p>
 										</form>
 										<?php
 										break;
 									case 2:
 										?>
 										<form action="index.php" method="POST">
-											<p><b>Вопрос номер два?</b></p>
-											<p><input name="var1" type="radio" value="var1">Верно</p>
-											<p><input name="var2" type="radio" value="var2">Неверно</p>
-											<p><input name="var3" type="radio" value="var3">Неверно</p>
-											<p><input type="submit" value="Отправить"></p>
+											<p><b>Р’РѕРїСЂРѕСЃ РЅРѕРјРµСЂ РґРІР°?</b></p>
+											<p><input name="var1" type="radio" value="var1">Р’РµСЂРЅРѕ</p>
+											<p><input name="var2" type="radio" value="var2">РќРµРІРµСЂРЅРѕ</p>
+											<p><input name="var3" type="radio" value="var3">РќРµРІРµСЂРЅРѕ</p>
+											<p><input type="submit" value="РћС‚РїСЂР°РІРёС‚СЊ"></p>
 										</form>
 										<?php
 										break;
 									case 3:
 										?>
 										<form action="index.php" method="POST">
-											<p><b>Вопрос номер три?</b></p>
-											<p><input name="var1" type="radio" value="var1">Верно</p>
-											<p><input name="var2" type="radio" value="var2">Неверно</p>
-											<p><input name="var3" type="radio" value="var3">Неверно</p>
-											<p><input type="submit" value="Отправить"></p>
+											<p><b>Р’РѕРїСЂРѕСЃ РЅРѕРјРµСЂ С‚СЂРё?</b></p>
+											<p><input name="var1" type="radio" value="var1">Р’РµСЂРЅРѕ</p>
+											<p><input name="var2" type="radio" value="var2">РќРµРІРµСЂРЅРѕ</p>
+											<p><input name="var3" type="radio" value="var3">РќРµРІРµСЂРЅРѕ</p>
+											<p><input type="submit" value="РћС‚РїСЂР°РІРёС‚СЊ"></p>
 										</form>
 										<?php
 										break;
 									case 4:
 										?>
 										<form action="index.php" method="POST">
-											<p><b>Вопрос номер четыре?</b></p>
+											<p><b>Р’РѕРїСЂРѕСЃ РЅРѕРјРµСЂ С‡РµС‚С‹СЂРµ?</b></p>
 											<input type="checkbox" id="var1" name="var1" value="var1"/>
-											<label for="var1">Неверно</label>
+											<label for="var1">РќРµРІРµСЂРЅРѕ</label>
 											<input type="checkbox" id="var2" name="var2" value="var2"/>
-											<label for="var2">Верно</label>
+											<label for="var2">Р’РµСЂРЅРѕ</label>
 											<input type="checkbox" id="var3" name="var3" value="var3"/>
-											<label for="var3">Верно</label>
-											<p><input type="submit" value="Отправить"></p>
+											<label for="var3">Р’РµСЂРЅРѕ</label>
+											<p><input type="submit" value="РћС‚РїСЂР°РІРёС‚СЊ"></p>
 										</form>
 										<?php
 										break;
 									case 5:
 										?>
 										<form action="index.php" method="POST">
-											<p><b>Вопрос номер пять?</b></p>
+											<p><b>Р’РѕРїСЂРѕСЃ РЅРѕРјРµСЂ РїСЏС‚СЊ?</b></p>
 											<input type="checkbox" id="var1" name="var1" value="var1"/>
-											<label for="var1">Неверно</label>
+											<label for="var1">РќРµРІРµСЂРЅРѕ</label>
 											<input type="checkbox" id="var2" name="var2" value="var2"/>
-											<label for="var2">Верно</label>
+											<label for="var2">Р’РµСЂРЅРѕ</label>
 											<input type="checkbox" id="var3" name="var3" value="var3"/>
-											<label for="var3">Верно</label>
-											<p><input type="submit" value="Отправить"></p>
+											<label for="var3">Р’РµСЂРЅРѕ</label>
+											<p><input type="submit" value="РћС‚РїСЂР°РІРёС‚СЊ"></p>
 										</form>
 										<?php
 										break;
 									case 6:
 										?>
 										<form action="index.php" method="POST">
-											<p><b>Вопрос номер шесть?</b></p>
+											<p><b>Р’РѕРїСЂРѕСЃ РЅРѕРјРµСЂ С€РµСЃС‚СЊ?</b></p>
 											<input type="checkbox" id="var1" name="var1" value="var1"/>
-											<label for="var1">Неверно</label>
+											<label for="var1">РќРµРІРµСЂРЅРѕ</label>
 											<input type="checkbox" id="var2" name="var2" value="var2"/>
-											<label for="var2">Верно</label>
+											<label for="var2">Р’РµСЂРЅРѕ</label>
 											<input type="checkbox" id="var3" name="var3" value="var3"/>
-											<label for="var3">Верно</label>
-											<p><input type="submit" value="Отправить"></p>
+											<label for="var3">Р’РµСЂРЅРѕ</label>
+											<p><input type="submit" value="РћС‚РїСЂР°РІРёС‚СЊ"></p>
 										</form>
 										<?php
 										break;
 									case 7:
 										?>
 										<form action="index.php" method="POST">
-											<p><b>Вопрос номер семь?</b></p>
+											<p><b>Р’РѕРїСЂРѕСЃ РЅРѕРјРµСЂ СЃРµРјСЊ?</b></p>
 											<p><textarea rows="10" cols="45" name="text"></textarea></p>
-											<p><input type="submit" value="Отправить"></p>
+											<p><input type="submit" value="РћС‚РїСЂР°РІРёС‚СЊ"></p>
 										</form>
 										<?php
 										break;
 									case 8:
 										?>
 										<form action="index.php" method="POST">
-											<p><b>Вопрос номер восемь?</b></p>
+											<p><b>Р’РѕРїСЂРѕСЃ РЅРѕРјРµСЂ РІРѕСЃРµРјСЊ?</b></p>
 											<p><textarea rows="10" cols="45" name="text"></textarea></p>
-											<p><input type="submit" value="Отправить"></p>
+											<p><input type="submit" value="РћС‚РїСЂР°РІРёС‚СЊ"></p>
 										</form>
 										<?php
 										break;
 									case 9:
 										?>
 										<form action="index.php" method="POST">
-											<p><b>Вопрос номер девять?</b></p>
+											<p><b>Р’РѕРїСЂРѕСЃ РЅРѕРјРµСЂ РґРµРІСЏС‚СЊ?</b></p>
 											<p><textarea rows="10" cols="45" name="text"></textarea></p>
-											<p><input type="submit" value="Отправить"></p>
+											<p><input type="submit" value="РћС‚РїСЂР°РІРёС‚СЊ"></p>
 										</form>
 										<?php
 										break;
 									case 10:
 										?>
 										<form action="index.php" method="POST">
-											<p><b>Вопрос номер десять?</b></p>
-											<p><input name="var1" type="radio" value="var1">Верно</p>
-											<p><input name="var2" type="radio" value="var2">Неверно</p>
-											<p><input name="var3" type="radio" value="var3">Неверно</p>
-											<p><input type="submit" value="Отправить"></p>
+											<p><b>Р’РѕРїСЂРѕСЃ РЅРѕРјРµСЂ РґРµСЃСЏС‚СЊ?</b></p>
+											<p><input name="var1" type="radio" value="var1">Р’РµСЂРЅРѕ</p>
+											<p><input name="var2" type="radio" value="var2">РќРµРІРµСЂРЅРѕ</p>
+											<p><input name="var3" type="radio" value="var3">РќРµРІРµСЂРЅРѕ</p>
+											<p><input type="submit" value="РћС‚РїСЂР°РІРёС‚СЊ"></p>
 										</form>
 										<?php
 										break;
 									case 11:
 										?>
-											<p><h1>Результаты</h1></p>
-											<p>Количество верных ответов: <?php echo $_SESSION["true"]; ?></p>
-											<p>Количество ошибок в вопросах: <?php
+											<p><h1>Р РµР·СѓР»СЊС‚Р°С‚С‹</h1></p>
+											<p>РљРѕР»РёС‡РµСЃС‚РІРѕ РІРµСЂРЅС‹С… РѕС‚РІРµС‚РѕРІ: <?php echo $_SESSION["true"]; ?></p>
+											<p>РљРѕР»РёС‡РµСЃС‚РІРѕ РѕС€РёР±РѕРє РІ РІРѕРїСЂРѕСЃР°С…: <?php
 												if ($_SESSION["count_errors"] == 0) {
-													echo "Ошибок нет!";
+													echo "РћС€РёР±РѕРє РЅРµС‚!";
 												} else {
 													for ($i = 0; $i < $_SESSION["count_errors"]; $i++) {
 														if ($i == 0) {
@@ -285,13 +285,13 @@
 												}
 											?>
 											</p>
-											<p>Время прохождения теста: <?php
+											<p>Р’СЂРµРјСЏ РїСЂРѕС…РѕР¶РґРµРЅРёСЏ С‚РµСЃС‚Р°: <?php
 												$now = new DateTime("now");
 												$interval = $_SESSION["time"]->diff($now);
-												echo $interval->format("%h часов, %i минут и  %s секунд");
+												echo $interval->format("%h С‡Р°СЃРѕРІ, %i РјРёРЅСѓС‚ Рё  %s СЃРµРєСѓРЅРґ");
 											?>
 											</p>
-											<a href="/">Возврат</a>
+											<a href="/">Р’РѕР·РІСЂР°С‚</a>
 										<?php
 											session_destroy();
 										break;
@@ -307,6 +307,6 @@
 			</div>
 		</div>
 	</div>
-	<div id="cr">&copy; <a href="http://vk.com/id58853410" style="color: #555;">igorek1794</a>, 2018<br>все права защищены дрессироваными енотами</div>
+	<div id="cr">&copy; <a href="http://vk.com/id58853410" style="color: #555;">igorek1794</a>, 2018<br>РІСЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹ РґСЂРµСЃСЃРёСЂРѕРІР°РЅС‹РјРё РµРЅРѕС‚Р°РјРё</div>
 </body>
 </html>
