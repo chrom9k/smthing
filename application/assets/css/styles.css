@@ -32,6 +32,7 @@ body > div{
 .content {
     width: 100%;
     align-items: initial;
+    max-height: 200px;
 }
 
 .content > div {
