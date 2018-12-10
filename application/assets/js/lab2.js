@@ -108,6 +108,7 @@ var sol = [
 
 window.onload = function (){
     listenerForLi();
+    listener();
     document.getElementById("exercice").innerHTML =  ex[0];
     document.getElementById("solution").innerHTML = sol[0];
     getMonth();
@@ -126,6 +127,27 @@ function listenerForLi() {
             el.classList.add("active");
         });
     }
+}
+
+function listener() {
+    var lis = document.getElementById("mySelector");
+    lis.addEventListener("change", function () {
+        alert();
+        document.getElementById("second").style.display = "none";
+        document.getElementById("third").style.display = "none";
+        document.getElementById("fourth").style.display = "none";
+        switch (lis.value) {
+            case 2:
+                document.getElementById("second").style.display = "flex";
+                break;
+            case 3:
+                document.getElementById("third").style.display = "flex";
+                break;
+            case 4:
+                document.getElementById("fourth").style.display = "flex";
+                break;
+        }
+    });
 }
 
 function getMonth() {

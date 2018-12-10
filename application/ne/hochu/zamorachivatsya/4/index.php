@@ -115,7 +115,6 @@
 <head>
 	<title>Система тестирования</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
-	<link rel="icon" type="image/png" href="favicon.ico">
 	<style type="text/css">
 		#content {
 			width: 75%;
