@@ -10,30 +10,65 @@
 ?>
 
 <?php
-	$tmp_str ="";
+	$str ="";
 	$new_str = "";
 
 	if (!empty($_POST["text"])) {
 
 		$str = $_POST["text"];
-		$words = explode(' ', $str);	// делим строку на слова и заносим в массив
-
-		$i = 0;
-		$cnt_symbols_in_line = 0;
-		$cnt_words_in_line = 0;
-		$str = 1;
-
-		while ($i < count($words)) {
-			if ((strlen($tmp_str) + strlen($words[$i]) + 1) <= 80 * $str) {
-                $tmp_str .= $words[$i];
-				if (strlen($tmp_str) < 80 * $str && strlen($tmp_str) != 80 * $str)
-                    $tmp_str .= ' ';
+		$words = explode(' ', $str);
+		$line = array();
+		$linesymbols = 0;
+		$spaces = 0;
+		$linespaces = 0;
+		
+		for ($i = 0; $i<count($words); $i++) {
+			if ($linesymbols +  iconv_strlen($words[$i]) < 81) {
+				array_push($line, $words[$i]);
+				$linesymbols += iconv_strlen($words[$i]) + 1;
 			} else {
-                $new_str .= $tmp_str. "\n";
-                $tmp_str = "";
-                $str++;
+				$i--;
+				$linesymbols -= 1;
+				$spaces = 80 - $linesymbols;
+				$linespaces = count($line) - 1;
+				for ($j = 0; $j<count($line); $j++) {
+					if ($j < count($line) - 1) {
+						$new_str .= $line[$j] . " ";
+					} else {
+						$new_str .= $line[$j];
+					}
+					if ($spaces > 0) {
+						for ($k = 0; $k < ceil($spaces / $linespaces); $k++) {
+							$new_str .= " ";
+						}
+						$spaces -= ceil($spaces / $linespaces);
+						$linespaces -= 1;
+					}
+				}
+				$new_str .= "\n";
+				$linesymbols = 0;
+				$line = array();
 			}
-			$i++;
+		}
+		
+		if (count($line) > 0) {
+			$linesymbols -= 1;
+			$spaces = 80 - $linesymbols;
+			$linespaces = count($line) - 1;
+			for ($j = 0; $j<count($line); $j++) {
+					if ($j < count($line) - 1) {
+						$new_str .= $line[$j] . " ";
+					} else {
+						$new_str .= $line[$j];
+					}
+					if ($spaces > 0) {
+						for ($k = 0; $k < ceil($spaces / $linespaces); $k++) {
+							$new_str .= " ";
+						}
+						$spaces -= ceil($spaces / $linespaces);
+						$linespaces -= 1;
+					}
+				}
 		}
 	}
 ?>
