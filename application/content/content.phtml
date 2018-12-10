@@ -1,5 +1,5 @@
-<div class="content">
-    <select id="mySelector">
+<div class="content" style="height: 200px">
+    <select id="mySelector" style="margin: 20px">
         <option value="2">Два</option>
         <option value="3">Три</option>
         <option value="4">Четыре</option>
@@ -40,7 +40,7 @@
     
     function listener() {
         var lis = document.getElementById("mySelector");
-        lis.addEventListener("click", function () {
+        lis.addEventListener("change", function () {
             document.getElementById("second").setAttribute("display", "none");
             document.getElementById("third").setAttribute("display", "none");
             document.getElementById("fourth").setAttribute("display", "none");
