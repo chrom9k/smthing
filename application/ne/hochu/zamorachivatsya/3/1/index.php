@@ -20,3 +20,9 @@
         </form>
     </body>
 </html>
+
+<style>
+    form div {
+        margin: 5px;
+    }
+</style>
