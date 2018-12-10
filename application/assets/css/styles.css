@@ -143,3 +143,7 @@ td {
 table {
     border-collapse: collapse;
 }
+
+form div {
+    margin: 5px;
+}
