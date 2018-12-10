@@ -1,4 +1,4 @@
-<div class="content" style="height: 200px">
+<div class="content" style="position: absolute; top: 10px; right: 10px">
     <select id="mySelector" style="margin: 20px">
         <option value="2">Два</option>
         <option value="3">Три</option>
@@ -41,18 +41,18 @@
     function listener() {
         var lis = document.getElementById("mySelector");
         lis.addEventListener("change", function () {
-            document.getElementById("second").setAttribute("display", "none");
-            document.getElementById("third").setAttribute("display", "none");
-            document.getElementById("fourth").setAttribute("display", "none");
+            document.getElementById("second").style.display = "none";
+            document.getElementById("third").style.display = "none";
+            document.getElementById("fourth").style.display = "none";
             switch (lis.value) {
                 case 2:
-                    document.getElementById("second").setAttribute("display", "block");
+                    document.getElementById("second").style.display = "flex";
                     break;
                 case 3:
-                    document.getElementById("third").setAttribute("display", "block");
+                    document.getElementById("third").style.display = "flex";
                     break;
                 case 4:
-                    document.getElementById("fourth").setAttribute("display", "block");
+                    document.getElementById("fourth").style.display = "flex";
                     break;
             }
         });
