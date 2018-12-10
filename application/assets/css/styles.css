@@ -29,12 +29,12 @@ body > div{
     align-items: center;
 }
 
-#content {
+.content {
     width: 100%;
     align-items: initial;
 }
 
-#content > div {
+.content > div {
     border: 1px solid #dddddd;
     border-radius: 4px;
     margin: 10px;

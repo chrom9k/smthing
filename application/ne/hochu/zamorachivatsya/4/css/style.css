@@ -1,0 +1,141 @@
+body {
+	padding: 0;
+	margin: 0;
+	background: #888 url('../images/bg.png');
+	color: #222;
+	text-shadow:#fff 1px 1px;
+	font:13px Calibri, Tahoma, sans-serif;
+}
+
+a:link, a:visited, a:active {
+	color: #2268c7;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #2268c7;
+	text-decoration: none;
+}
+
+h1.nick {
+	color: #333;
+	font: bold 38px Calibri, Tahoma, sans-serif;
+	text-shadow:#fff 1px 1px;
+	padding: 0;
+	margin: 0;
+}
+
+#content {
+	background: #eee;
+	border: #bbb 1px solid;
+	padding: 15px 10px;
+	visibility: visible;
+	overflow: hidden;
+	box-shadow: 0px 0px 15px 0px #333;
+	-webkit-box-shadow: 0px 0px 15px 0px #333;
+	-moz-box-shadow: 0px 0px 15px 0px #333;
+}
+
+#content {
+width: 75%;
+min-width: 1000px;
+max-width: 1350px;
+
+margin: 2% auto 0 auto;
+padding: 0;
+}
+
+button {
+	background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.2, rgb(202,202,202)),
+	color-stop(0.76, rgb(255,255,255))
+	);
+	background-image: -moz-linear-gradient(
+		center bottom,
+		rgb(202,202,202) 20%,
+		rgb(255,255,255) 76%
+	);
+	border:1px solid #999999;
+	cursor: pointer;
+	color: #333;
+	margin: 3px 0;
+	text-shadow:#fff 1px 1px;
+	vertical-align: middle;
+}
+
+img {
+	vertical-align: -2px;
+	border: 0;
+}
+
+img>#loadico {
+	vertical-align: -30%;
+}
+
+.top-panel {
+	top: 0;
+	font-size: 18px;
+	font-weight: bold;
+	background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.2, rgb(202,202,202)),
+	color-stop(0.76, rgb(255,255,255))
+	);
+	background-image: -moz-linear-gradient(
+		center bottom,
+		rgb(202,202,202) 20%,
+		rgb(255,255,255) 76%
+	);
+	min-height: 32px; 
+	width: 100%;
+}
+
+.right-panel {
+	font-size: 14px;
+	line-height: 1.5em;
+	vertical-align: top;
+	width: 100%;
+	float: left;
+	overflow: auto;
+	padding-bottom:10000px;
+	margin-bottom:-10000px;
+
+}
+
+.rp-content {
+	padding: 10px 15px;
+}
+
+.news-box {
+	border:1px solid #444;
+	background: #444;
+	color: #fff;
+	padding-top: 10px;
+	height: 30px;
+	width: 95%;
+	font: italic 14px Calibri, Tahoma, sans-serif;
+	text-shadow: none;
+	margin: 0 auto;
+	border-radius: 10px;
+	text-align: center;
+	vertical-align: middle;
+	margin-bottom: 15px;
+}
+
+#content-box {
+	width: 100%;
+}
+
+#cr {
+	margin: 8px auto; 
+	margin-bottom: 0;
+	text-align: center; 
+	color: #555;
+	text-shadow:#fff 1px 1px; 
+	font-size: 12px;
+}
