@@ -291,7 +291,7 @@
 												echo $interval->format("%h часов, %i минут и  %s секунд");
 											?>
 											</p>
-											<a href="/">Возврат</a>
+											<a href="/application/ne/hochu/zamorachivatsya/4/index.php">Возврат</a>
 										<?php
 											session_destroy();
 										break;
@@ -307,6 +307,5 @@
 			</div>
 		</div>
 	</div>
-	<div id="cr">&copy; <a href="http://vk.com/id58853410" style="color: #555;">igorek1794</a>, 2018<br>все права защищены дрессироваными енотами</div>
 </body>
 </html>

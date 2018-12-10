@@ -1,7 +1,6 @@
 body {
 	padding: 0;
 	margin: 0;
-	background: #888 url('../images/bg.png');
 	color: #222;
 	text-shadow:#fff 1px 1px;
 	font:13px Calibri, Tahoma, sans-serif;
@@ -31,9 +30,6 @@ h1.nick {
 	padding: 15px 10px;
 	visibility: visible;
 	overflow: hidden;
-	box-shadow: 0px 0px 15px 0px #333;
-	-webkit-box-shadow: 0px 0px 15px 0px #333;
-	-moz-box-shadow: 0px 0px 15px 0px #333;
 }
 
 #content {
@@ -46,18 +42,6 @@ padding: 0;
 }
 
 button {
-	background-image: -webkit-gradient(
-	linear,
-	left bottom,
-	left top,
-	color-stop(0.2, rgb(202,202,202)),
-	color-stop(0.76, rgb(255,255,255))
-	);
-	background-image: -moz-linear-gradient(
-		center bottom,
-		rgb(202,202,202) 20%,
-		rgb(255,255,255) 76%
-	);
 	border:1px solid #999999;
 	cursor: pointer;
 	color: #333;
@@ -79,18 +63,6 @@ img>#loadico {
 	top: 0;
 	font-size: 18px;
 	font-weight: bold;
-	background-image: -webkit-gradient(
-	linear,
-	left bottom,
-	left top,
-	color-stop(0.2, rgb(202,202,202)),
-	color-stop(0.76, rgb(255,255,255))
-	);
-	background-image: -moz-linear-gradient(
-		center bottom,
-		rgb(202,202,202) 20%,
-		rgb(255,255,255) 76%
-	);
 	min-height: 32px; 
 	width: 100%;
 }
